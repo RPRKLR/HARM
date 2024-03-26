@@ -1,0 +1,30 @@
+2024-03-21 21:54:51,155 [INFO] Starting folder setup process.
+2024-03-21 21:54:51,155 [INFO] Creating folder: /home/peter/dp/Human_Activity_Video_Recognition/data/output/models
+2024-03-21 21:54:51,155 [INFO] Creating folder: /home/peter/dp/Human_Activity_Video_Recognition/data/output/plots
+2024-03-21 21:54:51,155 [INFO] Creating folder: /home/peter/dp/Human_Activity_Video_Recognition/data/output/scalers
+2024-03-21 21:54:51,155 [INFO] Creating folder: /home/peter/dp/Human_Activity_Video_Recognition/data/output/encoders
+2024-03-21 21:54:51,156 [INFO] Creating folder: /home/peter/dp/Human_Activity_Video_Recognition/data/output/statistics
+2024-03-21 21:54:51,156 [INFO] Folder setup process finished successfully.
+2024-03-21 21:54:51,156 [INFO] Starting download of HMDB dataset.
+2024-03-21 21:57:38,088 [INFO] Finished downloading the HMDB dataset.
+2024-03-21 21:57:38,089 [INFO] Extracting the HMDB dataset.
+2024-03-21 21:58:09,247 [INFO] Finished extracting the HMDB dataset.
+2024-03-21 21:58:09,253 [INFO] All necessary datasets are downloaded.
+2024-03-21 21:58:09,253 [INFO] Starting Exploratory Data Analysis (EDA)
+2024-03-21 21:58:09,253 [INFO] Running analysis on DVORAK_CUSTOM dataset.
+2024-03-21 21:58:09,255 [INFO] The DVORAK_CUSTOM dataset contains 4 classes.
+2024-03-21 21:58:10,236 [INFO] Data classes in the DVORAK_CUSTOM dataset contain on average 16.25 videos.
+2024-03-21 21:58:10,236 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average 279.95 frame.
+2024-03-21 21:58:10,236 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the width of 720.0 .
+2024-03-21 21:58:10,236 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the height of 1280.0 .
+2024-03-21 21:58:10,236 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average have 29.86 FPS.
+2024-03-21 21:58:12,741 [INFO] Finished Exploratory Data Analysis (EDA)
+2024-03-21 21:58:12,742 [INFO] Starting Exploratory Data Analysis (EDA)
+2024-03-21 21:58:12,742 [INFO] Running analysis on HMDB dataset.
+2024-03-21 21:58:12,742 [INFO] The HMDB dataset contains 51 classes.
+2024-03-21 21:58:23,402 [INFO] Data classes in the HMDB dataset contain on average 132.67 videos.
+2024-03-21 21:58:23,402 [INFO] Videos in the HMDB dataset contain on average 94.49 frame.
+2024-03-21 21:58:23,402 [INFO] Frames in the HMDB dataset on average have the width of 366.81 .
+2024-03-21 21:58:23,402 [INFO] Frames in the HMDB dataset on average have the height of 240.0 .
+2024-03-21 21:58:23,402 [INFO] Videos in the HMDB dataset contain on average have 30.0 FPS.
+2024-03-21 21:58:25,969 [INFO] Finished Exploratory Data Analysis (EDA)
