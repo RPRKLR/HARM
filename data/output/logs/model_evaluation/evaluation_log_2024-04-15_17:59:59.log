@@ -1,0 +1,68 @@
+2024-04-15 18:03:43,301 [INFO] Confusion Matrix:
+[[2 0 0 2]
+ [0 1 0 0]
+ [1 1 2 0]
+ [0 0 0 4]]
+2024-04-15 18:03:43,499 [INFO] Classification Report:
+               precision    recall  f1-score   support
+
+   high_jumps       0.67      0.50      0.57         4
+        squat       0.50      1.00      0.67         1
+       lunges       1.00      0.50      0.67         4
+jumping_jacks       0.67      1.00      0.80         4
+
+     accuracy                           0.69        13
+    macro avg       0.71      0.75      0.68        13
+ weighted avg       0.76      0.69      0.68        13
+
+2024-04-15 18:07:30,200 [INFO] Confusion Matrix:
+[[2 0 0 2]
+ [0 1 0 0]
+ [0 2 2 0]
+ [0 0 0 4]]
+2024-04-15 18:07:30,371 [INFO] Classification Report:
+               precision    recall  f1-score   support
+
+   high_jumps       1.00      0.50      0.67         4
+        squat       0.33      1.00      0.50         1
+       lunges       1.00      0.50      0.67         4
+jumping_jacks       0.67      1.00      0.80         4
+
+     accuracy                           0.69        13
+    macro avg       0.75      0.75      0.66        13
+ weighted avg       0.85      0.69      0.69        13
+
+2024-04-15 18:12:29,368 [INFO] Confusion Matrix:
+[[1 0 0 3]
+ [0 1 0 0]
+ [0 0 4 0]
+ [0 0 0 4]]
+2024-04-15 18:12:29,612 [INFO] Classification Report:
+               precision    recall  f1-score   support
+
+   high_jumps       1.00      0.25      0.40         4
+        squat       1.00      1.00      1.00         1
+       lunges       1.00      1.00      1.00         4
+jumping_jacks       0.57      1.00      0.73         4
+
+     accuracy                           0.77        13
+    macro avg       0.89      0.81      0.78        13
+ weighted avg       0.87      0.77      0.73        13
+
+2024-04-15 18:17:12,250 [INFO] Confusion Matrix:
+[[2 0 0 2]
+ [0 1 0 0]
+ [1 1 2 0]
+ [0 0 0 4]]
+2024-04-15 18:17:12,425 [INFO] Classification Report:
+               precision    recall  f1-score   support
+
+   high_jumps       0.67      0.50      0.57         4
+        squat       0.50      1.00      0.67         1
+       lunges       1.00      0.50      0.67         4
+jumping_jacks       0.67      1.00      0.80         4
+
+     accuracy                           0.69        13
+    macro avg       0.71      0.75      0.68        13
+ weighted avg       0.76      0.69      0.68        13
+

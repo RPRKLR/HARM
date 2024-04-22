@@ -1,0 +1,7 @@
+2024-04-06 06:39:10,766 [INFO] Running analysis on UCF50 dataset.
+2024-04-06 06:39:10,773 [INFO] The UCF50 dataset contains 50 classes.
+2024-04-06 06:39:13,780 [INFO] Data classes in the UCF50 dataset contain on average 133.62 videos.
+2024-04-06 06:39:13,787 [INFO] Videos in the UCF50 dataset contain on average 199.21 frame.
+2024-04-06 06:39:13,793 [INFO] Frames in the UCF50 dataset on average have the width of 320.05 .
+2024-04-06 06:39:13,800 [INFO] Frames in the UCF50 dataset on average have the height of 239.99 .
+2024-04-06 06:39:13,806 [INFO] Videos in the UCF50 dataset contain on average have 26.56 FPS.

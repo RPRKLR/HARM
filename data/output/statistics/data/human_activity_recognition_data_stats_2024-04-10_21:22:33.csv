@@ -1,0 +1,2 @@
+dataset_name,avg_number_of_videos_per_class,avg_number_of_frames,avg_frame_width,avg_frame_height,avg_fps
+HMDB,132.67,94.49,366.81,240.0,30.0

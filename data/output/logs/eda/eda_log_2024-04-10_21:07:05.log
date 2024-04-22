@@ -1,0 +1,28 @@
+2024-04-10 21:07:05,924 [INFO] Running analysis on DVORAK_CUSTOM dataset.
+2024-04-10 21:07:05,924 [INFO] The DVORAK_CUSTOM dataset contains 4 classes.
+2024-04-10 21:07:10,934 [INFO] Data classes in the DVORAK_CUSTOM dataset contain on average 40.25 videos.
+2024-04-10 21:07:10,934 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average 285.54 frame.
+2024-04-10 21:07:10,934 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the width of 720.0 .
+2024-04-10 21:07:10,934 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the height of 1280.0 .
+2024-04-10 21:07:10,934 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average have 29.76 FPS.
+2024-04-10 21:11:22,518 [INFO] Running analysis on DVORAK_CUSTOM dataset.
+2024-04-10 21:11:22,518 [INFO] The DVORAK_CUSTOM dataset contains 4 classes.
+2024-04-10 21:11:27,339 [INFO] Data classes in the DVORAK_CUSTOM dataset contain on average 40.25 videos.
+2024-04-10 21:11:27,340 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average 285.54 frame.
+2024-04-10 21:11:27,340 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the width of 720.0 .
+2024-04-10 21:11:27,340 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the height of 1280.0 .
+2024-04-10 21:11:27,340 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average have 29.76 FPS.
+2024-04-10 21:16:46,850 [INFO] Running analysis on DVORAK_CUSTOM dataset.
+2024-04-10 21:16:46,850 [INFO] The DVORAK_CUSTOM dataset contains 4 classes.
+2024-04-10 21:16:51,673 [INFO] Data classes in the DVORAK_CUSTOM dataset contain on average 40.25 videos.
+2024-04-10 21:16:51,674 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average 285.54 frame.
+2024-04-10 21:16:51,674 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the width of 720.0 .
+2024-04-10 21:16:51,674 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the height of 1280.0 .
+2024-04-10 21:16:51,674 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average have 29.76 FPS.
+2024-04-10 21:22:33,065 [INFO] Running analysis on HMDB dataset.
+2024-04-10 21:22:33,066 [INFO] The HMDB dataset contains 51 classes.
+2024-04-10 21:22:47,435 [INFO] Data classes in the HMDB dataset contain on average 132.67 videos.
+2024-04-10 21:22:47,436 [INFO] Videos in the HMDB dataset contain on average 94.49 frame.
+2024-04-10 21:22:47,437 [INFO] Frames in the HMDB dataset on average have the width of 366.81 .
+2024-04-10 21:22:47,437 [INFO] Frames in the HMDB dataset on average have the height of 240.0 .
+2024-04-10 21:22:47,438 [INFO] Videos in the HMDB dataset contain on average have 30.0 FPS.

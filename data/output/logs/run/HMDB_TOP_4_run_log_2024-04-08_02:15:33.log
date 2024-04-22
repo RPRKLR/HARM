@@ -1,0 +1,102 @@
+2024-04-08 02:15:33,957 [INFO] Starting folder setup process.
+2024-04-08 02:15:33,959 [INFO] Folder setup process finished successfully.
+2024-04-08 02:15:33,982 [INFO] All necessary datasets are downloaded.
+2024-04-08 02:15:33,990 [INFO] Starting Exploratory Data Analysis (EDA)
+2024-04-08 02:15:33,996 [INFO] Running analysis on HMDB dataset.
+2024-04-08 02:15:34,581 [INFO] The HMDB dataset contains 51 classes.
+2024-04-08 02:17:14,955 [INFO] Data classes in the HMDB dataset contain on average 132.67 videos.
+2024-04-08 02:17:14,988 [INFO] Videos in the HMDB dataset contain on average 94.49 frame.
+2024-04-08 02:17:14,998 [INFO] Frames in the HMDB dataset on average have the width of 366.81 .
+2024-04-08 02:17:15,011 [INFO] Frames in the HMDB dataset on average have the height of 240.0 .
+2024-04-08 02:17:15,019 [INFO] Videos in the HMDB dataset contain on average have 30.0 FPS.
+2024-04-08 02:17:16,555 [INFO] Finished Exploratory Data Analysis (EDA)
+2024-04-08 02:17:16,558 [INFO] Started processing the HMDB dataset.
+2024-04-08 02:17:16,596 [INFO] Loading processed data from pickle files.
+2024-04-08 02:17:44,493 [INFO] Finished processing the HMDB dataset.
+2024-04-08 02:17:48,193 [INFO] Building Human Activity Recognition Model - ConvLSTM variant.
+2024-04-08 02:17:48,660 [INFO] Finished building Human Activity Recognition Model - ConvLSTM variant.
+2024-04-08 02:17:48,666 [INFO] Model architecture: Model: "sequential_85"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv_lstm2d_340 (ConvLSTM2D)         │ (None, 20, 62, 62, 4)       │           1,024 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling3d_340 (MaxPooling3D)     │ (None, 20, 31, 31, 4)       │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ time_distributed_255                 │ (None, 20, 31, 31, 4)       │               0 │
+│ (TimeDistributed)                    │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv_lstm2d_341 (ConvLSTM2D)         │ (None, 20, 29, 29, 8)       │           3,488 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling3d_341 (MaxPooling3D)     │ (None, 20, 15, 15, 8)       │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ time_distributed_256                 │ (None, 20, 15, 15, 8)       │               0 │
+│ (TimeDistributed)                    │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv_lstm2d_342 (ConvLSTM2D)         │ (None, 20, 13, 13, 14)      │          11,144 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling3d_342 (MaxPooling3D)     │ (None, 20, 7, 7, 14)        │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ time_distributed_257                 │ (None, 20, 7, 7, 14)        │               0 │
+│ (TimeDistributed)                    │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv_lstm2d_343 (ConvLSTM2D)         │ (None, 20, 5, 5, 16)        │          17,344 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling3d_343 (MaxPooling3D)     │ (None, 20, 3, 3, 16)        │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_85 (Flatten)                 │ (None, 2880)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_85 (Dense)                     │ (None, 20)                  │          57,620 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 90,620 (353.98 KB)
+ Trainable params: 90,620 (353.98 KB)
+ Non-trainable params: 0 (0.00 B)
+
+2024-04-08 02:47:04,836 [INFO] Confusion Matrix:
+[[ 7  0  0  0  0  1  0  0  5  0  0  0  1  1  2  1  0  2  1  3]
+ [ 0 13  1  2  0  1  1  0  0  0  0  0  2  1  1  0  0  3  1  1]
+ [ 1  1 14  0  0  0  0  0  0  0  0  0  0  0  0  0  0  3  3  0]
+ [ 5  1  0  9  0  0  0  2  0  0  2  1  3  1  1  1  0  0  2  1]
+ [ 0  0  0  0 14  0  0  0  0  0  2  1  2  0  2  0  0  0  0  1]
+ [ 0  0  0  0  0 14  0  0  3  0  0  0  1  1  1  1  0  0  0  1]
+ [ 0  0  1  0  0  0 13  1  0  0  1  0  0  0  2  0  0  0  0  1]
+ [ 0  0  0  1  2  0  0 11  1  0  1  0  0  0  2  2  0  2  0  0]
+ [ 1  0  1  2  0  2  0  0 10  0  0  1  2  0  1  0  0  0  4  3]
+ [ 0  1  0  0  0  0  0  0  0 18  0  2  0  0  2  2  0  0  0  0]
+ [ 0  0  0  1  1  1  2  1  1  0  6  0  1  0  1  2  2  0  1  1]
+ [ 0  0  1  0  0  0  0  0  0  4  1 18  0  0  0  0  0  1  0  0]
+ [ 2  1  0  1  0  0  0  0  2  0  0  0 16  2  1  0  0  0  2  1]
+ [ 5  0  1  1  0  1  1  0  1  0  0  0  3  8  0  1  0  0  0  0]
+ [ 0  1  1  1  3  0  0  0  1  3  1  1  2  0  7  0  1  1  0  0]
+ [ 0  0  0  0  0  0  1  0  0  0  2  0  0  0  0 17  0  0  2  0]
+ [ 0  0  0  0  0  0  0  1  0  0  0  1  0  0  0  0 18  0  1  1]
+ [ 3  1  2  0  0  1  3  1  1  1  0  0  0  3  1  0  0  3  3  5]
+ [ 1  1  1  1  2  1  1  0  1  0  0  0  0  4  5  1  0  1 10  0]
+ [ 0  0  0  0  0  0  0  0  3  1  0  0  1  2  0  0  0  0  2  3]]
+2024-04-08 02:47:05,164 [INFO] Classification Report:
+                precision    recall  f1-score   support
+
+           sit       0.28      0.29      0.29        24
+          chew       0.65      0.48      0.55        27
+        pullup       0.61      0.64      0.62        22
+    brush_hair       0.47      0.31      0.38        29
+    draw_sword       0.64      0.64      0.64        22
+       fencing       0.64      0.64      0.64        22
+     shoot_bow       0.59      0.68      0.63        19
+          push       0.65      0.50      0.56        22
+          kick       0.34      0.37      0.36        27
+         catch       0.67      0.72      0.69        25
+          dive       0.38      0.29      0.32        21
+          golf       0.72      0.72      0.72        25
+          clap       0.47      0.57      0.52        28
+          talk       0.35      0.36      0.36        22
+sword_exercise       0.24      0.30      0.27        23
+     cartwheel       0.61      0.77      0.68        22
+    shoot_ball       0.86      0.82      0.84        22
+         smile       0.19      0.11      0.14        28
+   shake_hands       0.31      0.33      0.32        30
+           eat       0.14      0.25      0.18        12
+
+      accuracy                           0.49       472
+     macro avg       0.49      0.49      0.48       472
+  weighted avg       0.49      0.49      0.48       472

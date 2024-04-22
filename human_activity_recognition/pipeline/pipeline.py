@@ -6,6 +6,7 @@ from human_activity_recognition.data_processing import (
     DataProcessor,
 )
 from human_activity_recognition.modeling import (
+    HumanActivityRecognitionModelCNN,
     HumanActivityRecognitionModelConvLSTM,
 )
 from human_activity_recognition.utils import (
@@ -22,6 +23,7 @@ class Pipeline:
     def __init__(self) -> None:
         """Initializes the Pipeline class."""
         self.__timestamp = datetime.now().strftime('%Y-%m-%d_%H:%M:%S')
+        self.__data_folder_path, self.__dataset_name = Config.DATA
 
     def __setup_logging(self) -> None:
         """Sets up different types of loggers used during the project."""
@@ -104,6 +106,7 @@ class Pipeline:
             self.__labels_valid,
             self.__features_test,
             self.__labels_test,
+            self.__id_class_pairing,
         ) = data_processor.run_data_processing(
             data_folder_path=data_folder_path,
             dataset_name=dataset_name,
@@ -113,37 +116,24 @@ class Pipeline:
         """Executes the project."""
         self.__setup_project()
 
-        for (data_folder_path, dataset_name,) in list(
-            zip(
-                [
-                    # Config.HMDB_DATA_FOLDER_PATH,
-                    # Config.UCF50_DATA_FOLDER_PATH,
-                    Config.OWN_DATA_FOLDER_PATH,
-                ],
-                [
-                    # Config.HMDB_DATA_NAME,
-                    # Config.UCF50_DATA_NAME,
-                    Config.OWN_DATA_NAME,
-                ],
-            )
-        ):
-            self.__run_data_processing(
-                data_folder_path=data_folder_path,
-                dataset_name=dataset_name,
-            )
+        self.__run_data_processing(
+            data_folder_path=self.__data_folder_path,
+            dataset_name=self.__dataset_name,
+        )
 
-            model = HumanActivityRecognitionModelConvLSTM(
-                dataset_name=dataset_name,
-                train_set_features=self.__features_train,
-                train_set_label=self.__labels_train,
-                validation_set_features=self.__features_valid,
-                validation_set_label=self.__labels_valid,
-                test_set_features=self.__features_test,
-                test_set_label=self.__labels_test,
-                timestamp=self.__timestamp,
-                loggers=[self.__run_logger, self.__evaluation_logger],
-                model_output_folder_path=Config.MODELS_OUTPUT_PATH,
-                plots_output_folder_path=Config.PLOTS_OUTPUT_FOLDER_PATH,
-            )
+        model = HumanActivityRecognitionModelConvLSTM(
+            dataset_name=self.__dataset_name,
+            train_set_features=self.__features_train,
+            train_set_label=self.__labels_train,
+            validation_set_features=self.__features_valid,
+            validation_set_label=self.__labels_valid,
+            test_set_features=self.__features_test,
+            test_set_label=self.__labels_test,
+            id_class_pairing=self.__id_class_pairing,
+            timestamp=self.__timestamp,
+            loggers=[self.__run_logger, self.__evaluation_logger],
+            model_output_folder_path=Config.MODELS_OUTPUT_PATH,
+            plots_output_folder_path=Config.PLOTS_OUTPUT_FOLDER_PATH,
+        )
 
-            model.run_modeling()
+        model.run_modeling()

@@ -1,0 +1,70 @@
+2024-04-09 07:40:54,263 [INFO] Starting folder setup process.
+2024-04-09 07:40:54,264 [INFO] Folder setup process finished successfully.
+2024-04-09 07:40:54,264 [INFO] All necessary datasets are downloaded.
+2024-04-09 07:40:54,264 [INFO] Starting Exploratory Data Analysis (EDA)
+2024-04-09 07:40:54,264 [INFO] Running analysis on DVORAK_CUSTOM dataset.
+2024-04-09 07:40:54,265 [INFO] The DVORAK_CUSTOM dataset contains 4 classes.
+2024-04-09 07:40:54,871 [INFO] Data classes in the DVORAK_CUSTOM dataset contain on average 16.25 videos.
+2024-04-09 07:40:54,872 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average 279.95 frame.
+2024-04-09 07:40:54,872 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the width of 720.0 .
+2024-04-09 07:40:54,873 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the height of 1280.0 .
+2024-04-09 07:40:54,873 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average have 29.86 FPS.
+2024-04-09 07:40:55,505 [INFO] Finished Exploratory Data Analysis (EDA)
+2024-04-09 07:40:55,506 [INFO] Started processing the DVORAK_CUSTOM dataset.
+2024-04-09 07:40:55,506 [INFO] Loading processed data from pickle files.
+2024-04-09 07:40:55,546 [INFO] Finished processing the DVORAK_CUSTOM dataset.
+2024-04-09 07:40:55,594 [INFO] Building Human Activity Recognition Model - ConvLSTM variant.
+2024-04-09 07:40:55,636 [INFO] Finished building Human Activity Recognition Model - ConvLSTM variant.
+2024-04-09 07:40:55,641 [INFO] Model architecture: Model: "sequential_11"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv_lstm2d_44 (ConvLSTM2D)          │ (None, 20, 62, 62, 4)       │           1,024 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling3d_44 (MaxPooling3D)      │ (None, 20, 31, 31, 4)       │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ time_distributed_33                  │ (None, 20, 31, 31, 4)       │               0 │
+│ (TimeDistributed)                    │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv_lstm2d_45 (ConvLSTM2D)          │ (None, 20, 29, 29, 8)       │           3,488 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling3d_45 (MaxPooling3D)      │ (None, 20, 15, 15, 8)       │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ time_distributed_34                  │ (None, 20, 15, 15, 8)       │               0 │
+│ (TimeDistributed)                    │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv_lstm2d_46 (ConvLSTM2D)          │ (None, 20, 13, 13, 14)      │          11,144 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling3d_46 (MaxPooling3D)      │ (None, 20, 7, 7, 14)        │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ time_distributed_35                  │ (None, 20, 7, 7, 14)        │               0 │
+│ (TimeDistributed)                    │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv_lstm2d_47 (ConvLSTM2D)          │ (None, 20, 5, 5, 16)        │          17,344 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling3d_47 (MaxPooling3D)      │ (None, 20, 3, 3, 16)        │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_11 (Flatten)                 │ (None, 2880)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_11 (Dense)                     │ (None, 4)                   │          11,524 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 44,524 (173.92 KB)
+ Trainable params: 44,524 (173.92 KB)
+ Non-trainable params: 0 (0.00 B)
+
+2024-04-09 07:41:11,592 [INFO] Confusion Matrix:
+[[4 0 0 0]
+ [0 2 0 0]
+ [0 0 1 2]
+ [0 0 0 4]]
+2024-04-09 07:41:11,664 [INFO] Classification Report:
+               precision    recall  f1-score   support
+
+   high_jumps       1.00      1.00      1.00         4
+jumping_jacks       1.00      1.00      1.00         2
+       lunges       1.00      0.33      0.50         3
+        squat       0.67      1.00      0.80         4
+
+     accuracy                           0.85        13
+    macro avg       0.92      0.83      0.82        13
+ weighted avg       0.90      0.85      0.82        13

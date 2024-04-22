@@ -2,13 +2,12 @@ import logging
 import os
 import pickle
 from logging import Logger
-from typing import Any, List, Optional, Union
+from typing import Any, Dict, List, Optional
 
 import cv2
-import plotly.graph_objects as go
+import pandas as pd
 import requests
 from cv2.typing import MatLike
-from matplotlib.figure import Figure
 from tqdm import tqdm
 from unrar import rarfile
 
@@ -256,62 +255,6 @@ def extract_frame_from_video(video_to_display: str) -> MatLike:
     return rgb_frame
 
 
-def save_plotly_figure(
-    figure: go.Figure,
-    parent_file_path: str,
-    file_name: str,
-) -> None:
-    """Saves Plotly graph object to file.
-
-    Args:
-        figure (go.Figure): Plotly graph object to write to file.
-        parent_file_path (str): Path of the parent output directory.
-        file_name (str): Output file name.
-    """
-    html_path = os.path.join(parent_file_path, 'html', f'{file_name}.html')
-    image_path = os.path.join(parent_file_path, 'image', f'{file_name}.png')
-
-    for path in [html_path, image_path]:
-        os.makedirs(os.path.dirname(path), exist_ok=True)
-
-    figure.write_html(html_path)
-    figure.write_image(image_path)
-
-
-def save_figure(
-    figure: Union[Figure, go.Figure],
-    plot_output_folder_path: str,
-    dataset_name: str,
-    plot_type: str,
-    file_name: str,
-) -> None:
-    """Saves figure to output file.
-
-    Args:
-        figure (Figure): Figure to save.
-        plot_output_folder_path (str): Generic plot output folder path.
-        dataset_name (str): Name of the dataset.
-        plot_type (str): Type of the plot.
-        file_name (str): Name of the output file.
-    """
-    output_file_path = os.path.join(
-        plot_output_folder_path, dataset_name, plot_type, file_name
-    )
-
-    parent_directory = create_missing_parent_directories(
-        file_paths=[output_file_path],
-    )[0]
-
-    if isinstance(figure, go.Figure):
-        save_plotly_figure(
-            figure=figure,
-            parent_file_path=parent_directory,
-            file_name=file_name,
-        )
-    else:
-        figure.savefig(output_file_path)
-
-
 def pickle_object(object: Any, save_path: str) -> None:
     """Pickles given `object` with the specified `save path`.
 
@@ -334,3 +277,136 @@ def load_pickle_object(pickle_path: str) -> Any:
     """
     with open(pickle_path, 'rb') as pickle_input:
         return pickle.load(pickle_input)
+
+
+def create_model_performance_entry(
+    model_type: str,
+    classification_report: Dict[str, Any],
+    model_output_path: str,
+    architecture_and_evaluation_output_path: str,
+) -> pd.DataFrame:
+    """Creates model performance entry.
+
+    Args:
+        model_type (str): Type of model used for evaluation.
+        classification_report (Dict[str, Any]): Classification report.
+        model_output_path (str): Model output path.
+        architecture_and_evaluation_output_path (str): Architecture and
+            evaluation log file output path.
+
+    Returns:
+        pd.DataFrame: _description_
+    """
+    macro = 'macro avg'
+    weighted = 'weighted avg'
+
+    return pd.DataFrame(
+        {
+            'number_of_classes': [Config.SUBSET_SIZE],
+            'image_height': [Config.IMAGE_HEIGHT],
+            'image_width': [Config.IMAGE_WIDTH],
+            'sequence_length': [Config.SEQUENCE_LENGTH],
+            'random_state': [Config.RANDOM_STATE],
+            'model_type': [model_type],
+            'output_layer_activation_function': [
+                Config.OUTPUT_LAYER_ACTIVATION_FUNCTION
+            ],
+            'loss_function': [Config.LOSS_FUNCTION],
+            'adam_optimizer_learning_rate': [
+                Config.ADAM_OPTIMIZER_LEARNING_RATE
+            ],
+            'training_shuffle': [Config.TRAINING_SHUFFLE],
+            'max_training_epochs': [Config.TRAINING_EPOCHS],
+            'batch_size': [Config.BATCH_SIZE],
+            'early_stopping': [Config.USE_EARLY_STOPPING],
+            'early_stopping_monitor': [Config.EARLY_STOPPING_MONITOR],
+            'early_stopping_mode': [Config.EARLY_STOPPING_MODE],
+            'early_stopping_patience': [Config.EARLY_STOPPING_PATIENCE],
+            'accuracy': [classification_report['accuracy']],
+            'macro_precision': [classification_report[macro]['precision']],
+            'macro_recall': [classification_report[macro]['recall']],
+            'macro_f1': [classification_report[macro]['f1-score']],
+            'weighted_precision': [
+                classification_report[weighted]['precision']
+            ],
+            'weighted_recall': [classification_report[weighted]['recall']],
+            'weighted_f1': [classification_report[weighted]['f1-score']],
+            'model_output_path': [model_output_path],
+            'architecture_and_evaluation_output_path': [
+                architecture_and_evaluation_output_path
+            ],
+        }
+    )
+
+
+def save_model_performance(
+    dataset_name: str,
+    model_type: str,
+    classification_report: Dict[str, Any],
+    model_output_path: str,
+    architecture_and_evaluation_output_path: str,
+) -> None:
+    """Saves model performance for future comparison.
+
+    Args:
+        dataset_name (str): Name of the dataset.
+        model_type (str): Type of model used for evaluation.
+        classification_report (Dict[str, Any]): Classification report.
+        model_output_path (str): Model output path.
+        architecture_and_evaluation_output_path (str): Architecture and
+            evaluation log file output path.
+    """
+    model_performance_history_path = os.path.join(
+        Config.MODEL_STATISTICS_OUTPUT_FOLDER_PATH,
+        f'{dataset_name}_model_performance_history.csv',
+    )
+
+    if not os.path.exists(model_performance_history_path):
+        pd.DataFrame(
+            {
+                'number_of_classes': [],
+                'image_height': [],
+                'image_width': [],
+                'sequence_length': [],
+                'random_state': [],
+                'model_type': [],
+                'output_layer_activation_function': [],
+                'loss_function': [],
+                'adam_optimizer_learning_rate': [],
+                'training_shuffle': [],
+                'max_training_epochs': [],
+                'batch_size': [],
+                'early_stopping': [],
+                'early_stopping_monitor': [],
+                'early_stopping_mode': [],
+                'early_stopping_patience': [],
+                'accuracy': [],
+                'macro_precision': [],
+                'macro_recall': [],
+                'macro_f1': [],
+                'weighted_precision': [],
+                'weighted_recall': [],
+                'weighted_f1': [],
+                'model_output_path': [],
+                'architecture_and_evaluation_output_path': [],
+            }
+        ).to_csv(model_performance_history_path, index=False)
+
+    statistics = pd.read_csv(model_performance_history_path)
+
+    average_values = create_model_performance_entry(
+        model_type=model_type,
+        classification_report=classification_report,
+        model_output_path=model_output_path,
+        architecture_and_evaluation_output_path=architecture_and_evaluation_output_path,
+    )
+    statistics = pd.concat(
+        [statistics if not statistics.empty else None, average_values],
+        ignore_index=True,
+    )
+
+    statistics.sort_values(
+        ['weighted_f1', 'accuracy'], ascending=[False, False], inplace=True
+    )
+
+    statistics.to_csv(model_performance_history_path, index=False)

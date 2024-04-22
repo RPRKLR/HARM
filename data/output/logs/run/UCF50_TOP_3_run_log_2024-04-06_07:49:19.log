@@ -1,0 +1,102 @@
+2024-04-06 07:49:19,118 [INFO] Starting folder setup process.
+2024-04-06 07:49:19,123 [INFO] Folder setup process finished successfully.
+2024-04-06 07:49:19,127 [INFO] All necessary datasets are downloaded.
+2024-04-06 07:49:19,131 [INFO] Starting Exploratory Data Analysis (EDA)
+2024-04-06 07:49:19,134 [INFO] Running analysis on UCF50 dataset.
+2024-04-06 07:49:19,416 [INFO] The UCF50 dataset contains 50 classes.
+2024-04-06 07:49:22,479 [INFO] Data classes in the UCF50 dataset contain on average 133.62 videos.
+2024-04-06 07:49:22,489 [INFO] Videos in the UCF50 dataset contain on average 199.21 frame.
+2024-04-06 07:49:22,526 [INFO] Frames in the UCF50 dataset on average have the width of 320.05 .
+2024-04-06 07:49:23,446 [INFO] Frames in the UCF50 dataset on average have the height of 239.99 .
+2024-04-06 07:49:23,485 [INFO] Videos in the UCF50 dataset contain on average have 26.56 FPS.
+2024-04-06 07:49:33,530 [INFO] Finished Exploratory Data Analysis (EDA)
+2024-04-06 07:49:33,535 [INFO] Started processing the UCF50 dataset.
+2024-04-06 07:49:33,539 [INFO] Loading processed data from pickle files.
+2024-04-06 07:49:33,897 [INFO] Finished processing the UCF50 dataset.
+2024-04-06 07:49:35,862 [INFO] Building Human Activity Recognition Model - ConvLSTM variant.
+2024-04-06 07:49:36,121 [INFO] Finished building Human Activity Recognition Model - ConvLSTM variant.
+2024-04-06 07:49:36,130 [INFO] Model architecture: Model: "sequential_185"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv_lstm2d_740 (ConvLSTM2D)         │ (None, 20, 30, 30, 4)       │           1,024 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling3d_740 (MaxPooling3D)     │ (None, 20, 15, 15, 4)       │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ time_distributed_555                 │ (None, 20, 15, 15, 4)       │               0 │
+│ (TimeDistributed)                    │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv_lstm2d_741 (ConvLSTM2D)         │ (None, 20, 13, 13, 8)       │           3,488 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling3d_741 (MaxPooling3D)     │ (None, 20, 7, 7, 8)         │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ time_distributed_556                 │ (None, 20, 7, 7, 8)         │               0 │
+│ (TimeDistributed)                    │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv_lstm2d_742 (ConvLSTM2D)         │ (None, 20, 5, 5, 14)        │          11,144 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling3d_742 (MaxPooling3D)     │ (None, 20, 3, 3, 14)        │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ time_distributed_557                 │ (None, 20, 3, 3, 14)        │               0 │
+│ (TimeDistributed)                    │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv_lstm2d_743 (ConvLSTM2D)         │ (None, 20, 1, 1, 16)        │          17,344 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling3d_743 (MaxPooling3D)     │ (None, 20, 1, 1, 16)        │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_185 (Flatten)                │ (None, 320)                 │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_185 (Dense)                    │ (None, 20)                  │           6,420 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 39,420 (153.98 KB)
+ Trainable params: 39,420 (153.98 KB)
+ Non-trainable params: 0 (0.00 B)
+
+2024-04-06 08:02:30,985 [INFO] Confusion Matrix:
+[[20  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0]
+ [ 0 33  0  0  0  0  0  1  0  0  0  0  1  1  0  0  0  0  0  0]
+ [ 0  0 15  0  0  1  0  0  0  0  0  0  0  0  0  1  1  0  0  0]
+ [ 0  0  0 22  1  0  0  0  0  0  0  0  0  0  0  0  0  1  2  1]
+ [ 0  0  0  0 28  0  1  0  1  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0 16  0  0  0  0  0  3  0  1  1  4  1  0  0  0]
+ [ 0  0  0  1  0  0 28  0  0  0  0  0  0  0  0  0  0  0  0  3]
+ [ 1  0  0  0  0  0  0 22  0  1  0  0  3  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  1  1  0 36  0  0  0  0  1  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0 29  0  0  0  0  1  0  0  0  0  1]
+ [ 0  0  0  0  0  0  1  0  0  0 19  0  0  0  0  0  0  1  0  0]
+ [ 0  0  0  0  0  2  0  0  1  1  0 14  1  0  2  0  0  0  2  0]
+ [ 0  0  0  0  0  0  0  2  0  0  1  0 16  1  0  0  0  0  0  0]
+ [ 0  0  0  0  0  1  0  0  0  0  0  0  1 14  0  0  1  0  2  0]
+ [ 0  0  1  0  0  0  0  0  0  0  0  2  0  2 24  0  2  0  0  0]
+ [ 0  0  1  0  0  0  0  0  0  0  0  0  0  0  0 37  0  0  0  0]
+ [ 0  0  0  0  1  0  0  1  1  1  2  2  1  4  0  0 14  0  0  0]
+ [ 1  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0 22  0  1]
+ [ 0  0  0  0  0  1  0  0  0  0  0  0  0  0  1  0  0  0 24  0]
+ [ 0  0  0  1  0  0  1  0  0  0  0  0  0  0  1  0  0  1  0 32]]
+2024-04-06 08:02:31,183 [INFO] Classification Report:
+                    precision    recall  f1-score   support
+
+       JumpingJack       0.91      0.95      0.93        21
+         Billiards       1.00      0.92      0.96        36
+            Skijet       0.88      0.83      0.86        18
+      PlayingPiano       0.92      0.81      0.86        27
+     PlayingGuitar       0.93      0.93      0.93        30
+        Basketball       0.73      0.62      0.67        26
+        BenchPress       0.88      0.88      0.88        32
+            Diving       0.85      0.81      0.83        27
+         Nunchucks       0.92      0.92      0.92        39
+             Punch       0.91      0.94      0.92        31
+     JugglingBalls       0.83      0.90      0.86        21
+ VolleyballSpiking       0.67      0.61      0.64        23
+ TrampolineJumping       0.70      0.80      0.74        20
+     SkateBoarding       0.58      0.74      0.65        19
+         PoleVault       0.80      0.77      0.79        31
+       TennisSwing       0.88      0.97      0.93        38
+RockClimbingIndoor       0.70      0.52      0.60        27
+          HulaHoop       0.88      0.88      0.88        25
+         HorseRace       0.80      0.92      0.86        26
+          Drumming       0.84      0.89      0.86        36
+
+          accuracy                           0.84       553
+         macro avg       0.83      0.83      0.83       553
+      weighted avg       0.84      0.84      0.84       553

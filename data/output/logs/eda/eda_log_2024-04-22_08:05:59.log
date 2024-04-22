@@ -1,0 +1,7 @@
+2024-04-22 08:05:59,793 [INFO] Running analysis on DVORAK_CUSTOM dataset.
+2024-04-22 08:05:59,794 [INFO] The DVORAK_CUSTOM dataset contains 4 classes.
+2024-04-22 08:06:04,838 [INFO] Data classes in the DVORAK_CUSTOM dataset contain on average 55.25 videos.
+2024-04-22 08:06:04,838 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average 269.18 frame.
+2024-04-22 08:06:04,838 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the width of 720.0 .
+2024-04-22 08:06:04,838 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the height of 1280.0 .
+2024-04-22 08:06:04,838 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average have 29.72 FPS.

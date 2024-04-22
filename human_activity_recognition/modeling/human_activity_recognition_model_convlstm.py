@@ -1,12 +1,9 @@
 import os
 from logging import Logger
-import pickle
-from typing import Any, List
+from typing import List
 
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import seaborn as sns
 from cv2.typing import MatLike
 from keras.callbacks import EarlyStopping
 from keras.layers import (
@@ -23,11 +20,17 @@ from keras.optimizers import Adam
 from sklearn.metrics import classification_report, confusion_matrix
 
 from human_activity_recognition.configs.config import ProjectConfig as Config
-from human_activity_recognition.utils import create_missing_parent_directories
-
+from human_activity_recognition.utils import (
+    generate_confusion_matrix,
+    generate_training_history_plots,
+    multi_log,
+    save_model_performance,
+)
+from human_activity_recognition.utils.utils import (
+    create_missing_parent_directories,
+)
 
 # TODO - Increase model performance (Possible architecture changes).
-# TODO - Change print statements to logging.
 
 
 class HumanActivityRecognitionModelConvLSTM:
@@ -46,12 +49,13 @@ class HumanActivityRecognitionModelConvLSTM:
         validation_set_label: np.ndarray[List[int]],
         test_set_features: np.ndarray[List[MatLike]],
         test_set_label: np.ndarray[List[int]],
+        id_class_pairing: pd.DataFrame,
         timestamp: str,
         loggers: List[Logger],
         plots_output_folder_path: str,
         model_output_folder_path: str,
     ) -> None:
-        """Initializes the HumanActivityRecognitionModel class.
+        """Initializes the HumanActivityRecognitionModelConvLSTM class.
 
         Args:
             dataset_name (str): Name of the dataset.
@@ -61,6 +65,8 @@ class HumanActivityRecognitionModelConvLSTM:
             validation_set_label (np.ndarray): Validation dataset label.
             test_set_features (np.ndarray): Test dataset features.
             test_set_label (np.ndarray): Test dataset label.
+            id_class_pairing (pd.DataFrame): ID and Class pairing used for
+                evaluation labeling.
             timestamp (str): Current run timestamp.
             loggers (List[Logger]): Run and evaluation logger used for
                 documenting processes.
@@ -76,76 +82,55 @@ class HumanActivityRecognitionModelConvLSTM:
         self.__validation_set_label: np.ndarray = validation_set_label
         self.__test_set_features: np.ndarray = test_set_features
         self.__test_set_label: np.ndarray = test_set_label
+        self.__id_class_pairing: pd.DataFrame = id_class_pairing
 
         # endregion
 
+        self.__dataset_name = dataset_name
         self.__timestamp = timestamp
         self.__run_logger = loggers[0]
-        self.__evaluation_logger = loggers[1]
+        self.__loggers = loggers
+        self.__evaluation_logger_output_path = (
+            loggers[1].handlers[0].baseFilename
+        )
 
         early_stopping_tag = (
             Config.EARLY_STOPPING_TAG if Config.USE_EARLY_STOPPING else ''
         )
 
+        self.__model_tag = 'convlstm'
         self.__model_name = (
-            f'human_activity_recognition_model_{Config.SUBSET_SIZE}_classes_'
-            f"adam_{str(Config.ADAM_OPTIMIZER_LEARNING_RATE).replace('.', '_')}"
+            f'human_activity_recognition_model_{self.__model_tag}_'
+            f'{Config.SUBSET_SIZE}_classes_adam_'
+            f"{str(Config.ADAM_OPTIMIZER_LEARNING_RATE).replace('.', '_')}"
             f'__epochs_{Config.TRAINING_EPOCHS}__batch_size_{Config.BATCH_SIZE}'
             f'{early_stopping_tag}_{self.__timestamp}'
         )
+        self.__model_type = 'HARM - ConvLSTM'
 
         self.__model_output_path: str = os.path.join(
             model_output_folder_path,
-            dataset_name,
+            self.__dataset_name,
             f'{self.__model_name}.keras',
         )
 
         self.__confusion_matrix_output_path = os.path.join(
             plots_output_folder_path,
-            dataset_name,
+            self.__dataset_name,
             'confusion_matrices',
             'image',
-            f'{self.__timestamp}_confusion_matrix.png',
+            f'{self.__timestamp}_{self.__model_tag}_confusion_matrix.png',
         )
 
         create_missing_parent_directories(
             file_paths=[
                 self.__model_output_path,
-                self.__confusion_matrix_output_path
+                self.__confusion_matrix_output_path,
             ],
             logger=self.__run_logger,
         )
 
         self.__model = self.__build_model()
-
-    def __generate_confusion_matrix(
-        self, confusion_matrix: np.ndarray, labels: List[Any]
-    ) -> None:
-        """Generates and saves the passed in Confusion Matrix.
-
-        Args:
-            confusion_matrix (numpy.ndarray) : Confusion Matrix to display.
-            labels (List[Any]) : Labels for Columns and Indexes.
-        """
-        # SOURCE:
-        # https://stackoverflow.com/questions/35572000/how-can-i-plot-a-confusion-matrix
-
-        # Convert Confusion Matrix to DataFrame
-        confusion_matrix = pd.DataFrame(
-            data=confusion_matrix, index=labels, columns=labels
-        )
-
-        # Create new Figure
-        plt.figure(figsize=(16, 9))
-
-        # Plot the Confusion Matrix
-        sns.heatmap(confusion_matrix, annot=True, fmt='g')
-
-        plt.title('Confusion Matrix')
-        plt.xlabel('Predicted Label')
-        plt.ylabel('Actual Label')
-
-        plt.savefig(self.__confusion_matrix_output_path)
 
     def __build_model(self) -> Model:
         """Builds Human Activity Recognition Model - ConvLSTM variant.
@@ -164,7 +149,7 @@ class HumanActivityRecognitionModelConvLSTM:
                     Config.SEQUENCE_LENGTH,
                     Config.IMAGE_HEIGHT,
                     Config.IMAGE_WIDTH,
-                    3
+                    3,
                 )
             )
         )
@@ -185,10 +170,10 @@ class HumanActivityRecognitionModelConvLSTM:
                 MaxPooling3D(
                     pool_size=(1, 2, 2),
                     padding='same',
-                    data_format='channels_last'
+                    data_format='channels_last',
                 )
             )
-            
+
             if iteration != 3:
                 model.add(TimeDistributed(layer=Dropout(rate=0.2)))
 
@@ -197,7 +182,7 @@ class HumanActivityRecognitionModelConvLSTM:
         model.add(
             Dense(
                 units=Config.SUBSET_SIZE,
-                activation=Config.OUTPUT_LAYER_ACTIVATION_FUNCTION
+                activation=Config.OUTPUT_LAYER_ACTIVATION_FUNCTION,
             )
         )
 
@@ -206,16 +191,13 @@ class HumanActivityRecognitionModelConvLSTM:
             'variant.'
         )
 
-        model.summary()
-
-        # Opened issue in keras
-        # model.summary(
-        #     print_fn=lambda summary: multi_log(
-        #         loggers=[self.__run_logger, self.__evaluation_logger],
-        #         log_func='info',
-        #         log_message=f'Model architecture: {summary}'
-        #     )
-        # )
+        model.summary(
+            print_fn=lambda summary: multi_log(
+                loggers=self.__loggers,
+                log_func='info',
+                log_message=f'Model architecture: {summary}',
+            )
+        )
 
         return model
 
@@ -225,20 +207,21 @@ class HumanActivityRecognitionModelConvLSTM:
             monitor=Config.EARLY_STOPPING_MONITOR,
             patience=Config.EARLY_STOPPING_PATIENCE,
             mode=Config.EARLY_STOPPING_MODE,
-            restore_best_weights=Config.EARLY_STOPPING_RESTORE_BEST_WEIGHTS
+            restore_best_weights=Config.EARLY_STOPPING_RESTORE_BEST_WEIGHTS,
         )
 
         self.__model.compile(
             loss=Config.LOSS_FUNCTION,
             optimizer=Adam(learning_rate=Config.ADAM_OPTIMIZER_LEARNING_RATE),
+            metrics=Config.METRICS_TO_SHOW,
         )
-        
-        self.__model.fit(
+
+        history = self.__model.fit(
             self.__train_set_features,
             self.__train_set_label,
             epochs=Config.TRAINING_EPOCHS,
             batch_size=Config.BATCH_SIZE,
-            shuffle=True,
+            shuffle=Config.TRAINING_SHUFFLE,
             verbose=2,
             validation_data=(
                 self.__validation_set_features,
@@ -248,7 +231,15 @@ class HumanActivityRecognitionModelConvLSTM:
                 [early_stopping_callback] if Config.USE_EARLY_STOPPING else None
             ),
         )
-    
+
+        generate_training_history_plots(
+            history=pd.DataFrame(history.history),
+            plot_output_folder_path=Config.PLOTS_OUTPUT_FOLDER_PATH,
+            dataset_name=self.__dataset_name,
+            timestamp=self.__timestamp,
+            model_tag=self.__model_tag,
+        )
+
     def predict(self, features: np.ndarray) -> np.ndarray:
         """Executes model prediction.
 
@@ -267,20 +258,51 @@ class HumanActivityRecognitionModelConvLSTM:
 
         self.__test_set_label = np.argmax(self.__test_set_label, axis=1)
 
+        labels = self.__id_class_pairing.sort_values('id')['class'].values
+
         # Display Confusion Matrix
         conf_matrix = confusion_matrix(
-            y_true=self.__test_set_label, y_pred=network_prediction
+            y_true=self.__test_set_label,
+            y_pred=network_prediction,
+        )
+
+        multi_log(
+            loggers=self.__loggers,
+            log_func='info',
+            log_message=f'Confusion Matrix:\n{conf_matrix}',
+        )
+
+        generate_confusion_matrix(
+            confusion_matrix=conf_matrix,
+            labels=labels,
+            output_path=self.__confusion_matrix_output_path,
         )
 
         class_report = classification_report(
-            y_true=self.__test_set_label, y_pred=network_prediction
+            y_true=self.__test_set_label,
+            y_pred=network_prediction,
+            target_names=labels,
         )
 
-        print(class_report)
+        class_report_dict = classification_report(
+            y_true=self.__test_set_label,
+            y_pred=network_prediction,
+            target_names=labels,
+            output_dict=True,
+        )
 
-        self.__generate_confusion_matrix(
-            confusion_matrix=conf_matrix,
-            labels=list(range(0, Config.SUBSET_SIZE)),
+        multi_log(
+            loggers=self.__loggers,
+            log_func='info',
+            log_message=f'Classification Report:\n{class_report}',
+        )
+
+        save_model_performance(
+            dataset_name=self.__dataset_name,
+            model_type=self.__model_type,
+            classification_report=class_report_dict,
+            model_output_path=self.__model_output_path,
+            architecture_and_evaluation_output_path=self.__evaluation_logger_output_path,
         )
 
     def run_modeling(self) -> None:

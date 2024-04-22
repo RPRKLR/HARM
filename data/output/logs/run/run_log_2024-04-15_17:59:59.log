@@ -1,0 +1,461 @@
+2024-04-15 17:59:59,663 [INFO] Starting folder setup process.
+2024-04-15 17:59:59,664 [INFO] Folder setup process finished successfully.
+2024-04-15 17:59:59,664 [INFO] All necessary datasets are downloaded.
+2024-04-15 17:59:59,664 [INFO] Starting Exploratory Data Analysis (EDA)
+2024-04-15 17:59:59,664 [INFO] Running analysis on DVORAK_CUSTOM dataset.
+2024-04-15 17:59:59,664 [INFO] The DVORAK_CUSTOM dataset contains 4 classes.
+2024-04-15 18:00:07,208 [INFO] Data classes in the DVORAK_CUSTOM dataset contain on average 55.25 videos.
+2024-04-15 18:00:07,208 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average 269.18 frame.
+2024-04-15 18:00:07,209 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the width of 720.0 .
+2024-04-15 18:00:07,209 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the height of 1280.0 .
+2024-04-15 18:00:07,209 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average have 29.72 FPS.
+2024-04-15 18:00:10,767 [INFO] Finished Exploratory Data Analysis (EDA)
+2024-04-15 18:00:10,767 [INFO] Started processing the DVORAK_CUSTOM dataset.
+2024-04-15 18:00:10,768 [INFO] Loading processed data from pickle files.
+2024-04-15 18:00:10,969 [INFO] Finished processing the DVORAK_CUSTOM dataset.
+2024-04-15 18:00:11,296 [INFO] Building Human Activity Recognition Model - ConvLSTM variant.
+2024-04-15 18:00:11,562 [INFO] Finished building Human Activity Recognition Model - ConvLSTM variant.
+2024-04-15 18:03:43,301 [INFO] Confusion Matrix:
+[[2 0 0 2]
+ [0 1 0 0]
+ [1 1 2 0]
+ [0 0 0 4]]
+2024-04-15 18:03:43,499 [INFO] Classification Report:
+               precision    recall  f1-score   support
+
+   high_jumps       0.67      0.50      0.57         4
+        squat       0.50      1.00      0.67         1
+       lunges       1.00      0.50      0.67         4
+jumping_jacks       0.67      1.00      0.80         4
+
+     accuracy                           0.69        13
+    macro avg       0.71      0.75      0.68        13
+ weighted avg       0.76      0.69      0.68        13
+
+2024-04-15 18:03:43,578 [INFO] Starting folder setup process.
+2024-04-15 18:03:43,579 [INFO] Folder setup process finished successfully.
+2024-04-15 18:03:43,579 [INFO] All necessary datasets are downloaded.
+2024-04-15 18:03:43,579 [INFO] Starting Exploratory Data Analysis (EDA)
+2024-04-15 18:03:43,579 [INFO] Running analysis on DVORAK_CUSTOM dataset.
+2024-04-15 18:03:43,579 [INFO] The DVORAK_CUSTOM dataset contains 4 classes.
+2024-04-15 18:03:48,154 [INFO] Data classes in the DVORAK_CUSTOM dataset contain on average 55.25 videos.
+2024-04-15 18:03:48,154 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average 269.18 frame.
+2024-04-15 18:03:48,154 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the width of 720.0 .
+2024-04-15 18:03:48,154 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the height of 1280.0 .
+2024-04-15 18:03:48,154 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average have 29.72 FPS.
+2024-04-15 18:03:49,267 [INFO] Finished Exploratory Data Analysis (EDA)
+2024-04-15 18:03:49,267 [INFO] Started processing the DVORAK_CUSTOM dataset.
+2024-04-15 18:03:49,267 [INFO] Loading processed data from pickle files.
+2024-04-15 18:03:49,414 [INFO] Finished processing the DVORAK_CUSTOM dataset.
+2024-04-15 18:03:49,495 [INFO] Building Human Activity Recognition Model - ConvLSTM variant.
+2024-04-15 18:03:49,613 [INFO] Finished building Human Activity Recognition Model - ConvLSTM variant.
+2024-04-15 18:07:30,200 [INFO] Confusion Matrix:
+[[2 0 0 2]
+ [0 1 0 0]
+ [0 2 2 0]
+ [0 0 0 4]]
+2024-04-15 18:07:30,371 [INFO] Classification Report:
+               precision    recall  f1-score   support
+
+   high_jumps       1.00      0.50      0.67         4
+        squat       0.33      1.00      0.50         1
+       lunges       1.00      0.50      0.67         4
+jumping_jacks       0.67      1.00      0.80         4
+
+     accuracy                           0.69        13
+    macro avg       0.75      0.75      0.66        13
+ weighted avg       0.85      0.69      0.69        13
+
+2024-04-15 18:07:30,415 [INFO] Starting folder setup process.
+2024-04-15 18:07:30,415 [INFO] Folder setup process finished successfully.
+2024-04-15 18:07:30,416 [INFO] All necessary datasets are downloaded.
+2024-04-15 18:07:30,416 [INFO] Starting Exploratory Data Analysis (EDA)
+2024-04-15 18:07:30,416 [INFO] Running analysis on DVORAK_CUSTOM dataset.
+2024-04-15 18:07:30,416 [INFO] The DVORAK_CUSTOM dataset contains 4 classes.
+2024-04-15 18:07:35,331 [INFO] Data classes in the DVORAK_CUSTOM dataset contain on average 55.25 videos.
+2024-04-15 18:07:35,331 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average 269.18 frame.
+2024-04-15 18:07:35,331 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the width of 720.0 .
+2024-04-15 18:07:35,332 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the height of 1280.0 .
+2024-04-15 18:07:35,332 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average have 29.72 FPS.
+2024-04-15 18:07:36,467 [INFO] Finished Exploratory Data Analysis (EDA)
+2024-04-15 18:07:36,467 [INFO] Started processing the DVORAK_CUSTOM dataset.
+2024-04-15 18:07:36,467 [INFO] Loading processed data from pickle files.
+2024-04-15 18:07:36,535 [INFO] Finished processing the DVORAK_CUSTOM dataset.
+2024-04-15 18:07:36,611 [INFO] Building Human Activity Recognition Model - ConvLSTM variant.
+2024-04-15 18:07:36,737 [INFO] Finished building Human Activity Recognition Model - ConvLSTM variant.
+2024-04-15 18:12:29,367 [INFO] Confusion Matrix:
+[[1 0 0 3]
+ [0 1 0 0]
+ [0 0 4 0]
+ [0 0 0 4]]
+2024-04-15 18:12:29,611 [INFO] Classification Report:
+               precision    recall  f1-score   support
+
+   high_jumps       1.00      0.25      0.40         4
+        squat       1.00      1.00      1.00         1
+       lunges       1.00      1.00      1.00         4
+jumping_jacks       0.57      1.00      0.73         4
+
+     accuracy                           0.77        13
+    macro avg       0.89      0.81      0.78        13
+ weighted avg       0.87      0.77      0.73        13
+
+2024-04-15 18:12:29,659 [INFO] Starting folder setup process.
+2024-04-15 18:12:29,660 [INFO] Folder setup process finished successfully.
+2024-04-15 18:12:29,660 [INFO] All necessary datasets are downloaded.
+2024-04-15 18:12:29,660 [INFO] Starting Exploratory Data Analysis (EDA)
+2024-04-15 18:12:29,660 [INFO] Running analysis on DVORAK_CUSTOM dataset.
+2024-04-15 18:12:29,661 [INFO] The DVORAK_CUSTOM dataset contains 4 classes.
+2024-04-15 18:12:34,427 [INFO] Data classes in the DVORAK_CUSTOM dataset contain on average 55.25 videos.
+2024-04-15 18:12:34,427 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average 269.18 frame.
+2024-04-15 18:12:34,428 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the width of 720.0 .
+2024-04-15 18:12:34,428 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the height of 1280.0 .
+2024-04-15 18:12:34,428 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average have 29.72 FPS.
+2024-04-15 18:12:36,419 [INFO] Finished Exploratory Data Analysis (EDA)
+2024-04-15 18:12:36,419 [INFO] Started processing the DVORAK_CUSTOM dataset.
+2024-04-15 18:12:36,419 [INFO] Loading processed data from pickle files.
+2024-04-15 18:12:36,516 [INFO] Finished processing the DVORAK_CUSTOM dataset.
+2024-04-15 18:12:36,627 [INFO] Building Human Activity Recognition Model - ConvLSTM variant.
+2024-04-15 18:12:36,854 [INFO] Finished building Human Activity Recognition Model - ConvLSTM variant.
+2024-04-15 18:17:12,250 [INFO] Confusion Matrix:
+[[2 0 0 2]
+ [0 1 0 0]
+ [1 1 2 0]
+ [0 0 0 4]]
+2024-04-15 18:17:12,425 [INFO] Classification Report:
+               precision    recall  f1-score   support
+
+   high_jumps       0.67      0.50      0.57         4
+        squat       0.50      1.00      0.67         1
+       lunges       1.00      0.50      0.67         4
+jumping_jacks       0.67      1.00      0.80         4
+
+     accuracy                           0.69        13
+    macro avg       0.71      0.75      0.68        13
+ weighted avg       0.76      0.69      0.68        13
+
+2024-04-15 18:17:12,474 [INFO] Starting folder setup process.
+2024-04-15 18:17:12,474 [INFO] Folder setup process finished successfully.
+2024-04-15 18:17:12,474 [INFO] All necessary datasets are downloaded.
+2024-04-15 18:17:12,474 [INFO] Starting Exploratory Data Analysis (EDA)
+2024-04-15 18:17:12,474 [INFO] Running analysis on HMDB dataset.
+2024-04-15 18:17:12,475 [INFO] The HMDB dataset contains 51 classes.
+2024-04-15 18:17:22,535 [INFO] Data classes in the HMDB dataset contain on average 132.67 videos.
+2024-04-15 18:17:22,536 [INFO] Videos in the HMDB dataset contain on average 94.49 frame.
+2024-04-15 18:17:22,536 [INFO] Frames in the HMDB dataset on average have the width of 366.81 .
+2024-04-15 18:17:22,536 [INFO] Frames in the HMDB dataset on average have the height of 240.0 .
+2024-04-15 18:17:22,537 [INFO] Videos in the HMDB dataset contain on average have 30.0 FPS.
+2024-04-15 18:17:25,062 [INFO] Finished Exploratory Data Analysis (EDA)
+2024-04-15 18:17:25,063 [INFO] Started processing the HMDB dataset.
+2024-04-15 18:17:25,063 [INFO] Processing the 'jump' data class.
+2024-04-15 18:17:25,063 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/St__Louis_Goalkeeping__Academy_elite_training_jump_f_nm_np1_ri_bad_14.avi'.
+2024-04-15 18:17:25,206 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/le_parkour_kl_jump_l_nm_np1_ri_bad_0.avi'.
+2024-04-15 18:17:25,534 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/TheBoondockSaints_jump_u_cm_np1_ri_bad_103.avi'.
+2024-04-15 18:17:25,749 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Sam_Cooksey_Goalkeeper_Training_jump_f_cm_np1_le_bad_9.avi'.
+2024-04-15 18:17:26,008 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Fellowship_5_jump_f_nm_np1_ri_bad_11.avi'.
+2024-04-15 18:17:26,209 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/prelinger_ControlY1950_jump_f_nm_np1_fr_med_12.avi'.
+2024-04-15 18:17:26,438 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Sommerland_Syd_sprung_in_den_tod_jump_f_cm_np1_fr_bad_0.avi'.
+2024-04-15 18:17:26,856 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Gregoire_Airman_showreel_2008_jump_f_cm_np1_ri_bad_6.avi'.
+2024-04-15 18:17:27,126 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Learn_Freerunning_and_Parkour_-_Diving_Roll_jump_f_cm_np1_le_bad_4.avi'.
+2024-04-15 18:17:27,264 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Learn_Freerunning_and_Parkour__-_Diving_Kong_jump_f_cm_np1_le_bad_2.avi'.
+2024-04-15 18:17:27,407 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Return_of_the_King_7_jump_f_cm_np1_ri_bad_0.avi'.
+2024-04-15 18:17:27,573 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Goalkeeper_Felix_Schwake_jump_f_cm_np1_le_bad_8.avi'.
+2024-04-15 18:17:27,713 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/St__Louis_Goalkeeping__Academy_elite_training_jump_f_nm_np1_le_bad_5.avi'.
+2024-04-15 18:17:27,837 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/le_parkour_kl_jump_f_nm_np1_le_bad_3.avi'.
+2024-04-15 18:17:28,050 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/DONNIE_DARKO_jump_f_nm_np1_ri_bad_6.avi'.
+2024-04-15 18:17:28,233 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/le_parkour_kl_jump_l_nm_np1_ri_bad_2.avi'.
+2024-04-15 18:17:28,568 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Arrasando_no_Le_Parkour_jump_f_nm_np1_ri_med_3.avi'.
+2024-04-15 18:17:28,772 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/IamLegend_jump_f_cm_np1_ba_bad_12.avi'.
+2024-04-15 18:17:28,915 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/KUNG_FU_HUSTLE_jump_f_nm_np1_fr_bad_46.avi'.
+2024-04-15 18:17:29,047 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/KUNG_FU_HUSTLE_jump_f_nm_np1_fr_bad_38.avi'.
+2024-04-15 18:17:29,233 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Veoh_Alpha_Dog_1_jump_f_cm_np1_ri_bad_28.avi'.
+2024-04-15 18:17:29,643 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/BLACK_HAWK_DOWN_jump_f_cm_np1_ri_bad_8.avi'.
+2024-04-15 18:17:30,037 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/RATRACE_jump_f_nm_np1_ba_bad_29.avi'.
+2024-04-15 18:17:30,207 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Documentario_Le_Parkour_Londrina_jump_f_cm_np1_ri_bad_5.avi'.
+2024-04-15 18:17:30,381 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Sam_Cooksey_Goalkeeper_Training_jump_f_cm_np1_le_bad_3.avi'.
+2024-04-15 18:17:30,524 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/THE_PROTECTOR_jump_f_nm_np1_fr_bad_96.avi'.
+2024-04-15 18:17:30,692 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Stadium_Plyometric_Workout_jump_f_cm_np1_ba_med_8.avi'.
+2024-04-15 18:17:30,868 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Documentario_Le_Parkour_Londrina_jump_f_nm_np1_ri_bad_3.avi'.
+2024-04-15 18:17:31,075 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Documentario_Le_Parkour_Londrina_jump_f_nm_np1_ri_bad_2.avi'.
+2024-04-15 18:17:31,214 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/TheBoondockSaints_jump_u_cm_np1_ri_bad_127.avi'.
+2024-04-15 18:17:31,409 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Stadium_Plyometric_Workout_jump_f_cm_np1_ba_bad_5.avi'.
+2024-04-15 18:17:31,594 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Learn_Freerunning_and_Parkour__-_Diving_Kong_jump_f_cm_np1_le_bad_0.avi'.
+2024-04-15 18:17:31,731 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/prelinger_ControlY1950_jump_f_nm_np1_fr_bad_6.avi'.
+2024-04-15 18:17:31,877 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Parkour-_Diving_Kong_jump_u_cm_np1_fr_bad_1.avi'.
+2024-04-15 18:17:32,149 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/St__Louis_Goalkeeping__Academy_elite_training_jump_f_nm_np1_ri_bad_11.avi'.
+2024-04-15 18:17:32,357 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/le_parkour_kl_jump_l_nm_np1_le_bad_1.avi'.
+2024-04-15 18:17:32,588 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/BATMAN_BEGINS_jump_f_cm_np1_ri_med_18.avi'.
+2024-04-15 18:17:32,874 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Documentario_Le_Parkour_Londrina_jump_f_nm_np1_le_bad_8.avi'.
+2024-04-15 18:17:33,163 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Arrasando_no_Le_Parkour_jump_f_cm_np1_le_bad_0.avi'.
+2024-04-15 18:17:33,326 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Documentario_Le_Parkour_Londrina_jump_f_cm_np1_le_bad_11.avi'.
+2024-04-15 18:17:33,496 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/RATRACE_jump_f_cm_np1_fr_bad_39.avi'.
+2024-04-15 18:17:33,750 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Sam_Cooksey_Goalkeeper_Training_jump_f_cm_np1_le_bad_10.avi'.
+2024-04-15 18:17:33,906 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/St__Louis_Goalkeeping__Academy_elite_training_jump_f_nm_np1_ri_bad_2.avi'.
+2024-04-15 18:17:34,092 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/THE_PROTECTOR_jump_f_cm_np1_fr_bad_29.avi'.
+2024-04-15 18:17:34,278 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/St__Louis_Goalkeeping__Academy_elite_training_jump_f_nm_np1_le_bad_3.avi'.
+2024-04-15 18:17:34,396 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Documentario_Le_Parkour_Londrina_jump_f_nm_np1_ri_bad_4.avi'.
+2024-04-15 18:17:34,521 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/St__Louis_Goalkeeping__Academy_elite_training_jump_f_nm_np1_le_bad_8.avi'.
+2024-04-15 18:17:34,662 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/likebeckam_jump_l_cm_np1_ri_bad_17.avi'.
+2024-04-15 18:17:34,857 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/prelinger_ControlY1950_jump_f_nm_np1_fr_bad_13.avi'.
+2024-04-15 18:17:34,995 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Goalkeeper_Felix_Schwake_jump_f_cm_np1_le_bad_6.avi'.
+2024-04-15 18:17:35,152 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Gregoire_Airman_showreel_2008_jump_f_cm_np1_ri_bad_5.avi'.
+2024-04-15 18:17:35,306 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/THE_PROTECTOR_jump_f_nm_np1_ba_bad_11.avi'.
+2024-04-15 18:17:35,453 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/RATRACE_jump_f_cm_np1_fr_bad_38.avi'.
+2024-04-15 18:17:35,659 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Gregoire_Airman_showreel_2008_jump_f_cm_np1_ri_bad_3.avi'.
+2024-04-15 18:17:35,910 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Faith_Rewarded_jump_f_nm_np1_ri_med_89.avi'.
+2024-04-15 18:17:36,233 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Learn_Freerunning_and_Parkour__-_Diving_Kong_jump_f_cm_np1_ba_bad_1.avi'.
+2024-04-15 18:17:36,381 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/50_FIRST_DATES_jump_f_nm_np1_fr_bad_3.avi'.
+2024-04-15 18:17:36,553 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/KUNG_FU_HUSTLE_jump_f_cm_np1_le_bad_57.avi'.
+2024-04-15 18:17:36,779 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Gregoire_Airman_showreel_2008_jump_f_cm_np1_ba_bad_1.avi'.
+2024-04-15 18:17:36,982 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Fellowship_7_jump_f_cm_np1_fr_bad_1.avi'.
+2024-04-15 18:17:37,212 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/THE_PROTECTOR_jump_f_cm_np1_ba_bad_30.avi'.
+2024-04-15 18:17:37,538 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Documentario_Le_Parkour_Londrina_jump_f_cm_np1_ri_bad_6.avi'.
+2024-04-15 18:17:37,803 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Goalkeeper_Felix_Schwake_jump_f_cm_np1_ri_bad_1.avi'.
+2024-04-15 18:17:38,053 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/St__Louis_Goalkeeping__Academy_elite_training_jump_f_nm_np1_ri_bad_10.avi'.
+2024-04-15 18:17:38,239 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/St__Louis_Goalkeeping__Academy_elite_training_jump_f_nm_np1_ri_bad_12.avi'.
+2024-04-15 18:17:38,375 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/THE_PROTECTOR_jump_f_cm_np1_ba_bad_14.avi'.
+2024-04-15 18:17:38,569 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/St__Louis_Goalkeeping__Academy_elite_training_jump_f_nm_np1_le_bad_4.avi'.
+2024-04-15 18:17:38,711 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Sam_Cooksey_Goalkeeper_Training_jump_f_cm_np1_ri_bad_6.avi'.
+2024-04-15 18:17:38,876 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/St__Louis_Goalkeeping__Academy_elite_training_jump_f_nm_np1_le_bad_7.avi'.
+2024-04-15 18:17:38,997 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Arrasando_no_Le_Parkour_jump_f_nm_np1_le_med_2.avi'.
+2024-04-15 18:17:39,166 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Learn_Freerunning_and_Parkour__-_Diving_Kong_jump_f_cm_np1_le_bad_3.avi'.
+2024-04-15 18:17:39,317 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Gregoire_Airman_showreel_2008_jump_f_cm_np1_le_bad_4.avi'.
+2024-04-15 18:17:39,485 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Gregoire_Airman_showreel_2008_jump_f_cm_np1_le_bad_2.avi'.
+2024-04-15 18:17:39,755 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Fellowship_5_jump_f_nm_np1_fr_bad_10.avi'.
+2024-04-15 18:17:39,876 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Documentario_Le_Parkour_Londrina_jump_f_nm_np1_ba_bad_1.avi'.
+2024-04-15 18:17:39,993 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/St__Louis_Goalkeeping__Academy_elite_training_jump_f_nm_np1_ri_bad_16.avi'.
+2024-04-15 18:17:40,119 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Documentario_Le_Parkour_Londrina_jump_f_cm_np1_ba_bad_12.avi'.
+2024-04-15 18:17:40,338 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/St__Louis_Goalkeeping__Academy_elite_training_jump_f_nm_np1_ri_bad_9.avi'.
+2024-04-15 18:17:40,469 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Parkour-_Diving_Kong_jump_u_cm_np1_ri_bad_0.avi'.
+2024-04-15 18:17:40,660 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/TheBoondockSaints_jump_f_cm_np1_ba_bad_67.avi'.
+2024-04-15 18:17:40,838 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/happy_go_lovely_jump_f_cm_np1_fr_bad_20.avi'.
+2024-04-15 18:17:40,976 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Sam_Cooksey_Goalkeeper_Training_jump_f_cm_np1_ri_bad_1.avi'.
+2024-04-15 18:17:41,128 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Goalkeeper_Felix_Schwake_jump_f_cm_np1_le_bad_5.avi'.
+2024-04-15 18:17:41,278 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Le_Parkour_TVCA_esporte_jump_f_cm_np1_le_bad_2.avi'.
+2024-04-15 18:17:41,487 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Sam_Cooksey_Goalkeeper_Training_jump_f_cm_np1_ri_bad_0.avi'.
+2024-04-15 18:17:41,648 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Two_Towers_6_jump_f_nm_np1_le_bad_9.avi'.
+2024-04-15 18:17:41,795 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/St__Louis_Goalkeeping__Academy_elite_training_jump_f_nm_np1_ri_bad_0.avi'.
+2024-04-15 18:17:41,993 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Sam_Cooksey_Goalkeeper_Training_jump_f_cm_np1_ri_bad_5.avi'.
+2024-04-15 18:17:42,144 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/BLACK_HAWK_DOWN_jump_f_cm_np1_ri_bad_9.avi'.
+2024-04-15 18:17:42,294 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/ThePerfectScore_jump_u_cm_np1_fr_bad_4.avi'.
+2024-04-15 18:17:42,451 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/St__Louis_Goalkeeping__Academy_elite_training_jump_f_nm_np1_ri_bad_1.avi'.
+2024-04-15 18:17:42,661 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/St__Louis_Goalkeeping__Academy_elite_training_jump_f_nm_np1_le_bad_15.avi'.
+2024-04-15 18:17:42,796 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/St__Louis_Goalkeeping__Academy_elite_training_jump_f_cm_np1_le_bad_6.avi'.
+2024-04-15 18:17:42,937 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/A_Beautiful_Mind_1_jump_f_cm_np1_ba_bad_3.avi'.
+2024-04-15 18:17:43,181 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Sam_Cooksey_Goalkeeper_Training_jump_f_cm_np1_ri_bad_7.avi'.
+2024-04-15 18:17:43,344 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/LE_PARKOUR_BRASIL_DIOGO_GRANATO_(HD)_jump_u_cm_np1_le_bad_0.avi'.
+2024-04-15 18:17:43,583 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Huge_Dive-Roll_jump_f_cm_np1_ri_bad_0.avi'.
+2024-04-15 18:17:43,722 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Return_of_the_King_12_jump_f_nm_np2_fr_bad_2.avi'.
+2024-04-15 18:17:43,987 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/RATRACE_jump_f_nm_np1_ba_bad_30.avi'.
+2024-04-15 18:17:44,180 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Arrasando_no_Le_Parkour_jump_f_cm_np1_ri_bad_1.avi'.
+2024-04-15 18:17:44,432 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Two_Towers_6_jump_f_nm_np1_le_bad_8.avi'.
+2024-04-15 18:17:44,582 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Fellowship_2_jump_f_nm_np1_ba_bad_7.avi'.
+2024-04-15 18:17:44,697 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Faith_Rewarded_jump_f_nm_np1_ri_bad_86.avi'.
+2024-04-15 18:17:44,928 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/RETURN_OF_THE_KING_jump_f_nm_np1_fr_bad_40.avi'.
+2024-04-15 18:17:45,183 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/TheBoondockSaints_jump_u_cm_np1_fr_bad_83.avi'.
+2024-04-15 18:17:45,377 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/LONGESTYARD_jump_f_cm_np1_ri_bad_21.avi'.
+2024-04-15 18:17:45,566 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/THE_PROTECTOR_jump_f_nm_np1_ba_bad_90.avi'.
+2024-04-15 18:17:45,745 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Faith_Rewarded_jump_f_cm_np1_ri_bad_24.avi'.
+2024-04-15 18:17:46,051 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/New_polish_best_goalkeeper_-_FC_Barcelona_jump_f_cm_np1_le_bad_0.avi'.
+2024-04-15 18:17:46,205 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/OldSchool_jump_f_nm_np1_fr_bad_26.avi'.
+2024-04-15 18:17:46,317 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/happy_go_lovely_jump_h_cm_np1_fr_bad_0.avi'.
+2024-04-15 18:17:46,474 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Stadium_Plyometric_Workout_jump_f_cm_np1_ba_bad_6.avi'.
+2024-04-15 18:17:46,661 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Sam_Cooksey_Goalkeeper_Training_jump_f_cm_np1_le_bad_8.avi'.
+2024-04-15 18:17:46,824 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Goalkeeper_Felix_Schwake_jump_f_nm_np1_le_bad_7.avi'.
+2024-04-15 18:17:47,045 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Documentario_Le_Parkour_Londrina_jump_f_nm_np1_ri_bad_7.avi'.
+2024-04-15 18:17:47,233 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/RETURN_OF_THE_KING_jump_f_cm_np1_fr_bad_29.avi'.
+2024-04-15 18:17:47,433 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/THE_PROTECTOR_jump_f_nm_np1_ba_bad_64.avi'.
+2024-04-15 18:17:47,685 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Documentario_Le_Parkour_Londrina_jump_f_nm_np1_ba_bad_0.avi'.
+2024-04-15 18:17:47,900 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/LONGESTYARD_jump_f_cm_np1_le_bad_14.avi'.
+2024-04-15 18:17:48,222 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Gregoire_Airman_showreel_2008_jump_f_cm_np1_le_bad_0.avi'.
+2024-04-15 18:17:48,568 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Sam_Cooksey_Goalkeeper_Training_jump_f_cm_np1_le_bad_11.avi'.
+2024-04-15 18:17:48,806 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/NOVA_ELEGANTUNIVERSE1_jump_f_nm_np1_le_bad_4.avi'.
+2024-04-15 18:17:49,111 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/HeavyHouse_jump_h_cm_np1_fr_bad_0.avi'.
+2024-04-15 18:17:49,711 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Fellowship_5_jump_f_nm_np1_ba_bad_12.avi'.
+2024-04-15 18:17:49,899 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Goalkeeper_Felix_Schwake_jump_f_nm_np1_ri_bad_4.avi'.
+2024-04-15 18:17:50,056 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/RushHour2_jump_h_nm_np1_ba_bad_8.avi'.
+2024-04-15 18:17:50,398 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/RATRACE_jump_f_cm_np1_ba_bad_3.avi'.
+2024-04-15 18:17:50,606 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Sam_Cooksey_Goalkeeper_Training_jump_f_cm_np1_le_bad_2.avi'.
+2024-04-15 18:17:50,735 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Fellowship_2_jump_f_nm_np1_ri_bad_8.avi'.
+2024-04-15 18:17:50,885 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/St__Louis_Goalkeeping__Academy_elite_training_jump_f_nm_np1_le_bad_13.avi'.
+2024-04-15 18:17:51,083 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Goalkeeper_Felix_Schwake_jump_f_cm_np1_ri_bad_0.avi'.
+2024-04-15 18:17:51,245 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Learn_Freerunning_and_Parkour__-_Diving_Kong_jump_f_cm_np1_le_bad_5.avi'.
+2024-04-15 18:17:51,375 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Documentario_Le_Parkour_Londrina_jump_f_cm_np1_fr_bad_10.avi'.
+2024-04-15 18:17:51,525 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Documentario_Le_Parkour_Londrina_jump_f_cm_np1_fr_bad_9.avi'.
+2024-04-15 18:17:51,674 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Goalkeeper_Felix_Schwake_jump_f_cm_np1_ri_bad_2.avi'.
+2024-04-15 18:17:51,816 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Goalkeeper_Felix_Schwake_jump_f_nm_np1_ri_bad_3.avi'.
+2024-04-15 18:17:51,959 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/CharlieAndTheChocolateFactory_jump_f_nm_np1_fr_bad_5.avi'.
+2024-04-15 18:17:52,140 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Learn_Freerunning_and_Parkour__-_Diving_Kong_jump_f_cm_np1_fr_bad_4.avi'.
+2024-04-15 18:17:52,371 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/KUNG_FU_HUSTLE_jump_f_cm_np1_fr_bad_55.avi'.
+2024-04-15 18:17:52,553 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Faith_Rewarded_jump_f_cm_np1_ba_bad_15.avi'.
+2024-04-15 18:17:52,900 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/DONNIE_DARKO_jump_f_nm_np1_fr_med_7.avi'.
+2024-04-15 18:17:53,625 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/KUNG_FU_HUSTLE_jump_f_cm_np1_le_bad_56.avi'.
+2024-04-15 18:17:53,968 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/LONGESTYARD_jump_f_cm_np1_ri_bad_22.avi'.
+2024-04-15 18:17:54,209 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/THE_PROTECTOR_jump_f_nm_np1_fr_bad_95.avi'.
+2024-04-15 18:17:54,416 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/KUNG_FU_HUSTLE_jump_f_cm_np1_fr_bad_16.avi'.
+2024-04-15 18:17:54,628 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Sam_Cooksey_Goalkeeper_Training_jump_f_cm_np1_le_bad_4.avi'.
+2024-04-15 18:17:54,775 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Stadium_Plyometric_Workout_jump_f_cm_np1_ba_bad_7.avi'.
+2024-04-15 18:17:54,954 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/prelinger_ControlY1950_jump_f_nm_np1_fr_bad_7.avi'.
+2024-04-15 18:17:55,174 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/RATRACE_jump_f_cm_np1_fr_bad_40.avi'.
+2024-04-15 18:17:55,394 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/Le_Parkour_TVCA_esporte_jump_f_cm_np1_fr_bad_1.avi'.
+2024-04-15 18:17:55,642 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/jump/TheBoondockSaints_jump_u_nm_np1_fr_bad_73.avi'.
+2024-04-15 18:17:56,002 [INFO] Processing the 'smile' data class.
+2024-04-15 18:17:56,002 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Re-_Show_your_Smile!_3_smile_h_nm_np1_fr_goo_0.avi'.
+2024-04-15 18:17:56,185 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Re-_Show_your_Smile!_1_smile_h_nm_np1_fr_goo_0.avi'.
+2024-04-15 18:17:56,342 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_goo_29.avi'.
+2024-04-15 18:17:56,503 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Glory_smile_h_nm_np1_fr_med_5.avi'.
+2024-04-15 18:17:56,693 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_med_20.avi'.
+2024-04-15 18:17:56,819 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/SE7EN_SMILES_x3_smile_h_nm_np1_fr_med_6.avi'.
+2024-04-15 18:17:57,165 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_med_23.avi'.
+2024-04-15 18:17:57,349 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Return_of_the_King_1_smile_h_nm_np1_fr_goo_6.avi'.
+2024-04-15 18:17:57,581 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_med_4.avi'.
+2024-04-15 18:17:57,702 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/SMILES_FROM_OFF_THE_ROAD_3_-TRAVELS_WITH_A_HAT_smile_h_nm_np1_fr_med_1.avi'.
+2024-04-15 18:17:57,891 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_med_11.avi'.
+2024-04-15 18:17:58,087 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_goo_1.avi'.
+2024-04-15 18:17:58,245 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_goo_33.avi'.
+2024-04-15 18:17:58,374 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/show_your_smile_-)_smile_h_nm_np1_fr_med_0.avi'.
+2024-04-15 18:17:58,526 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_cm_np1_fr_bad_25.avi'.
+2024-04-15 18:17:58,725 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_goo_14.avi'.
+2024-04-15 18:17:58,933 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Prelinger_ActYourA1949_smile_u_nm_np1_fr_med_19.avi'.
+2024-04-15 18:17:59,115 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_med_8.avi'.
+2024-04-15 18:17:59,307 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_bad_18.avi'.
+2024-04-15 18:17:59,517 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Glory_smile_h_nm_np1_le_goo_6.avi'.
+2024-04-15 18:17:59,764 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Pirates_3_smile_h_nm_np1_ri_goo_1.avi'.
+2024-04-15 18:18:00,010 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_cm_np1_fr_bad_37.avi'.
+2024-04-15 18:18:00,211 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_bad_27.avi'.
+2024-04-15 18:18:00,383 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/SMILES_FROM_OFF_THE_ROAD_3_-TRAVELS_WITH_A_HAT_smile_h_nm_np1_fr_goo_0.avi'.
+2024-04-15 18:18:00,586 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/SMILES_FROM_OFF_THE_ROAD_3_-TRAVELS_WITH_A_HAT_smile_h_nm_np1_fr_med_5.avi'.
+2024-04-15 18:18:00,853 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Return_of_the_King_4_smile_h_nm_np1_fr_goo_4.avi'.
+2024-04-15 18:18:01,213 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/smile_collection_7_smile_h_nm_np1_fr_goo_0.avi'.
+2024-04-15 18:18:01,548 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/youtube_smile_response_smile_h_nm_np1_fr_goo_0.avi'.
+2024-04-15 18:18:02,045 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Re-_Show_Your_Smile_smile_h_nm_np1_fr_goo_0.avi'.
+2024-04-15 18:18:02,301 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Me_smiling_smile_h_nm_np1_fr_goo_0.avi'.
+2024-04-15 18:18:02,623 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Re-_Show_your_Smile!_smile_h_nm_np1_fr_goo_0.avi'.
+2024-04-15 18:18:02,747 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/SE7EN_SMILES_x3_smile_h_nm_np1_fr_med_4.avi'.
+2024-04-15 18:18:02,967 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/SMILES_FROM_OFF_THE_ROAD_3_-TRAVELS_WITH_A_HAT_smile_h_nm_np1_fr_med_4.avi'.
+2024-04-15 18:18:03,155 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/SMILES_FROM_OFF_THE_ROAD_2_-TREASURING_THE_GIRLCHILD_smile_h_nm_np1_fr_med_3.avi'.
+2024-04-15 18:18:03,345 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/SMILES_FROM_OFF_THE_ROAD_2_-TREASURING_THE_GIRLCHILD_smile_h_nm_np1_fr_goo_2.avi'.
+2024-04-15 18:18:03,574 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_cm_np1_fr_med_31.avi'.
+2024-04-15 18:18:03,701 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/SE7EN_SMILES_x3_smile_h_cm_np1_fr_med_0.avi'.
+2024-04-15 18:18:03,853 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Smile_smile_h_cm_np1_fr_goo_0.avi'.
+2024-04-15 18:18:04,119 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_med_13.avi'.
+2024-04-15 18:18:04,311 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_med_38.avi'.
+2024-04-15 18:18:04,450 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/SE7EN_SMILES_x3_smile_h_cm_np1_fr_goo_5.avi'.
+2024-04-15 18:18:04,652 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/SE7EN_SMILES_x3_smile_h_nm_np1_fr_med_1.avi'.
+2024-04-15 18:18:04,817 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/smile_collection_7_smile_h_nm_np1_fr_goo_1.avi'.
+2024-04-15 18:18:05,119 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_cm_np1_fr_goo_0.avi'.
+2024-04-15 18:18:05,318 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_med_24.avi'.
+2024-04-15 18:18:05,441 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Re-_Show_your_Smile!_10_smile_h_nm_np1_fr_goo_0.avi'.
+2024-04-15 18:18:05,605 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/SMILES_FROM_OFF_THE_ROAD_3_-TRAVELS_WITH_A_HAT_smile_h_nm_np1_fr_bad_2.avi'.
+2024-04-15 18:18:05,773 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_med_16.avi'.
+2024-04-15 18:18:05,988 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/SMILES_FROM_OFF_THE_ROAD_3_-TRAVELS_WITH_A_HAT_smile_h_nm_np1_fr_goo_3.avi'.
+2024-04-15 18:18:06,337 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_med_12.avi'.
+2024-04-15 18:18:06,538 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Smile!_smile_h_cm_np1_fr_goo_0.avi'.
+2024-04-15 18:18:06,882 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_med_36.avi'.
+2024-04-15 18:18:07,134 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_goo_40.avi'.
+2024-04-15 18:18:07,302 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/SE7EN_SMILES_x3_smile_h_cm_np1_fr_goo_9.avi'.
+2024-04-15 18:18:07,569 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/showyoursmile_smile_h_nm_np1_fr_goo_0.avi'.
+2024-04-15 18:18:07,775 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_cm_np1_fr_bad_3.avi'.
+2024-04-15 18:18:07,897 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_goo_6.avi'.
+2024-04-15 18:18:08,022 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/A_Beautiful_Mind_2_smile_h_nm_np1_fr_goo_2.avi'.
+2024-04-15 18:18:08,265 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_cm_np1_fr_med_39.avi'.
+2024-04-15 18:18:08,441 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/SMILES_FROM_OFF_THE_ROAD_2_-TREASURING_THE_GIRLCHILD_smile_h_nm_np1_fr_med_0.avi'.
+2024-04-15 18:18:08,717 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Show_my_what_smile_h_cm_np1_fr_med_0.avi'.
+2024-04-15 18:18:08,894 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_goo_7.avi'.
+2024-04-15 18:18:09,027 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/SMILES_FROM_OFF_THE_ROAD_2_-TREASURING_THE_GIRLCHILD_smile_h_cm_np1_fr_bad_1.avi'.
+2024-04-15 18:18:09,219 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Show_Your_Smile_-)_1_smile_h_nm_np1_fr_goo_0.avi'.
+2024-04-15 18:18:09,410 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/SE7EN_SMILES_x3_smile_h_nm_np1_fr_med_2.avi'.
+2024-04-15 18:18:09,630 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/prelinger_LetsPlay1949_smile_h_nm_np1_le_goo_25.avi'.
+2024-04-15 18:18:10,138 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_cm_np1_fr_med_2.avi'.
+2024-04-15 18:18:10,264 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_goo_35.avi'.
+2024-04-15 18:18:10,391 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_cm_np1_fr_goo_28.avi'.
+2024-04-15 18:18:10,541 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/SE7EN_SMILES_x3_smile_h_nm_np1_fr_bad_7.avi'.
+2024-04-15 18:18:10,783 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Re-_Show_your_Smile!_7_smile_h_nm_np1_fr_med_0.avi'.
+2024-04-15 18:18:10,979 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_goo_9.avi'.
+2024-04-15 18:18:11,098 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/SE7EN_SMILES_x3_smile_h_cm_np1_fr_med_10.avi'.
+2024-04-15 18:18:11,243 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/SE7EN_SMILES_x3_smile_h_nm_np1_fr_med_8.avi'.
+2024-04-15 18:18:11,455 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_bad_21.avi'.
+2024-04-15 18:18:11,588 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/prelinger_LetsPlay1949_smile_h_nm_np1_fr_goo_27.avi'.
+2024-04-15 18:18:11,899 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/my_smile_smile_h_cm_np1_fr_goo_0.avi'.
+2024-04-15 18:18:12,131 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_cm_np1_fr_med_26.avi'.
+2024-04-15 18:18:12,348 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_med_19.avi'.
+2024-04-15 18:18:12,546 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_goo_10.avi'.
+2024-04-15 18:18:12,740 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/prelinger_LetsPlay1949_smile_u_nm_np1_ri_med_21.avi'.
+2024-04-15 18:18:13,187 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/prelinger_they_grow_up_so_fast_1_smile_u_nm_np1_fr_med_0.avi'.
+2024-04-15 18:18:13,392 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_med_17.avi'.
+2024-04-15 18:18:13,604 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/SE7EN_SMILES_x3_smile_h_cm_np1_fr_med_3.avi'.
+2024-04-15 18:18:13,841 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Prelinger_HabitPat1954_smile_h_nm_np1_fr_goo_27.avi'.
+2024-04-15 18:18:14,266 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Re-_Re-_Show_your_Smile!_smile_h_nm_np1_fr_med_0.avi'.
+2024-04-15 18:18:14,437 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Re-_Show_your_Smile!_2_smile_h_nm_np1_fr_goo_0.avi'.
+2024-04-15 18:18:14,613 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_cm_np1_fr_bad_5.avi'.
+2024-04-15 18:18:14,737 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_goo_22.avi'.
+2024-04-15 18:18:14,871 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Re-_Show_your_Smile!_8_smile_h_nm_np1_fr_goo_0.avi'.
+2024-04-15 18:18:15,059 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Two_Towers_3_smile_h_nm_np1_fr_goo_7.avi'.
+2024-04-15 18:18:15,259 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_med_15.avi'.
+2024-04-15 18:18:15,379 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/MySmile_smile_h_nm_np1_fr_goo_0.avi'.
+2024-04-15 18:18:15,591 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/My_smileEh_smile_h_nm_np1_fr_goo_0.avi'.
+2024-04-15 18:18:15,769 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_cm_np1_fr_goo_34.avi'.
+2024-04-15 18:18:15,899 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Re-_Show_your_Smile!_4_smile_h_nm_np1_fr_med_0.avi'.
+2024-04-15 18:18:16,098 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_cm_np1_fr_goo_30.avi'.
+2024-04-15 18:18:16,302 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Smile_-]_smile_h_nm_np1_fr_goo_0.avi'.
+2024-04-15 18:18:16,469 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/Re-_Show_your_Smile!_9_smile_h_nm_np1_fr_med_0.avi'.
+2024-04-15 18:18:16,714 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/For_youtube_smiles_smile_h_nm_np1_fr_med_0.avi'.
+2024-04-15 18:18:16,889 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/YouTube_smiles!_smile_h_nm_np1_fr_med_32.avi'.
+2024-04-15 18:18:17,150 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/smile/prelinger_LetsPlay1949_smile_u_nm_np1_fr_med_24.avi'.
+2024-04-15 18:18:17,368 [INFO] Processing the 'shoot_ball' data class.
+2024-04-15 18:18:17,368 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/KELVIN_shoot_ball_u_cm_np1_ba_med_2.avi'.
+2024-04-15 18:18:17,739 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/ReggieMillerTakesonThreeAverageGuysinaShootout_shoot_ball_u_nm_np1_ba_med_7.avi'.
+2024-04-15 18:18:17,982 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/ImprovingBasketballSkills-BasketballNBA3-PointShots_shoot_ball_f_nm_np1_ri_med_0.avi'.
+2024-04-15 18:18:18,170 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/BrandonWebmanplayingbasketball_shoot_ball_f_nm_np1_le_med_2.avi'.
+2024-04-15 18:18:18,750 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/PlayingBasketballGotWater_shoot_ball_f_nm_np1_ri_med_2.avi'.
+2024-04-15 18:18:18,923 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/PlayingBasketball_shoot_ball_f_nm_np1_ri_med_2.avi'.
+2024-04-15 18:18:19,149 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/Finding_Forrester_3_shoot_ball_f_nm_np2_ba_med_3.avi'.
+2024-04-15 18:18:19,371 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/KELVIN_shoot_ball_u_cm_np1_ba_med_5.avi'.
+2024-04-15 18:18:19,746 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/JashaunKidsWhoRipAmazingBasketball_shoot_ball_f_cm_np1_ba_med_6.avi'.
+2024-04-15 18:18:20,023 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/10YearOldYouthBasketballStarBaller_shoot_ball_f_nm_np1_ba_med_11.avi'.
+2024-04-15 18:18:20,239 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/Finding_Forrester_1_shoot_ball_f_nm_np1_le_bad_3.avi'.
+2024-04-15 18:18:20,531 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/ReggieMillerTakesonThreeAverageGuysinaShootout_shoot_ball_u_nm_np1_ba_med_0.avi'.
+2024-04-15 18:18:20,835 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/PlayingBasketball_shoot_ball_f_nm_np1_ri_med_1.avi'.
+2024-04-15 18:18:21,033 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/WeTheKingsplaying_shoot_ball_u_cm_np1_ba_med_4.avi'.
+2024-04-15 18:18:21,318 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/10YearOldYouthBasketballStarBaller_shoot_ball_f_nm_np1_ba_med_14.avi'.
+2024-04-15 18:18:21,533 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/3PointJumpShotPractice-09_21_07_shoot_ball_f_nm_np1_ri_med_8.avi'.
+2024-04-15 18:18:21,757 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/ReggieMillerTakesonThreeAverageGuysinaShootout_shoot_ball_u_nm_np1_ba_med_1.avi'.
+2024-04-15 18:18:22,001 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/ReggieMillerTakesonThreeAverageGuysinaShootout_shoot_ball_u_cm_np1_fr_med_14.avi'.
+2024-04-15 18:18:22,249 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/AdamandAlvonplayingbasketball1_shoot_ball_u_cm_np1_le_med_0.avi'.
+2024-04-15 18:18:22,484 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/ImprovingBasketballSkills-BasketballNBA3-PointShots_shoot_ball_f_nm_np1_ri_med_1.avi'.
+2024-04-15 18:18:22,846 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/10YearOldYouthBasketballStarBaller_shoot_ball_f_nm_np1_ba_med_12.avi'.
+2024-04-15 18:18:23,055 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/Clay_sBasketballSkillz_shoot_ball_f_nm_np1_ba_med_13.avi'.
+2024-04-15 18:18:23,233 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/ReggieMillerTakesonThreeAverageGuysinaShootout_shoot_ball_u_nm_np1_ba_med_18.avi'.
+2024-04-15 18:18:23,481 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/Clay_sBasketballSkillz_shoot_ball_f_nm_np1_ba_med_14.avi'.
+2024-04-15 18:18:23,696 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/BrandonWebmanplayingbasketball_shoot_ball_f_nm_np1_le_med_0.avi'.
+2024-04-15 18:18:23,920 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/Clay_sBasketballSkillz_shoot_ball_f_nm_np1_ba_med_6.avi'.
+2024-04-15 18:18:24,111 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/BrandonWebmanplayingbasketball_shoot_ball_f_nm_np1_ba_med_1.avi'.
+2024-04-15 18:18:24,353 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/PlayingBasketballGotWater_shoot_ball_f_nm_np1_ba_med_0.avi'.
+2024-04-15 18:18:24,524 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/BrandonWebmanplayingbasketball_shoot_ball_f_nm_np1_ba_med_5.avi'.
+2024-04-15 18:18:24,794 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/ImprovingBasketballSkills-BasketballCrossover_shoot_ball_f_nm_np1_fr_med_0.avi'.
+2024-04-15 18:18:25,064 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/3PointJumpShotPractice-09_21_07_shoot_ball_f_nm_np1_ri_med_5.avi'.
+2024-04-15 18:18:25,268 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/Clay_sBasketballSkillz_shoot_ball_f_nm_np1_ba_med_5.avi'.
+2024-04-15 18:18:25,466 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/ReggieMillerTakesonThreeAverageGuysinaShootout_shoot_ball_u_nm_np1_ba_med_17.avi'.
+2024-04-15 18:18:25,703 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/KELVIN_shoot_ball_u_cm_np1_ba_med_1.avi'.
+2024-04-15 18:18:26,089 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/ReggieMillerTakesonThreeAverageGuysinaShootout_shoot_ball_u_nm_np1_ba_med_19.avi'.
+2024-04-15 18:18:26,524 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/10YearOldYouthBasketballStarBaller_shoot_ball_f_cm_np1_ba_med_3.avi'.
+2024-04-15 18:18:26,683 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/Clay_sBasketballSkillz_shoot_ball_f_nm_np1_ba_med_4.avi'.
+2024-04-15 18:18:26,907 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/ReggieMillerTakesonThreeAverageGuysinaShootout_shoot_ball_u_nm_np1_ba_med_13.avi'.
+2024-04-15 18:18:27,260 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/PlayingBasketballGotWater_shoot_ball_f_nm_np1_ba_med_4.avi'.
+2024-04-15 18:18:27,418 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/ReggieMillerTakesonThreeAverageGuysinaShootout_shoot_ball_u_nm_np1_le_med_20.avi'.
+2024-04-15 18:18:27,673 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/LearnToShootFromTheMaster_shoot_ball_f_nm_np1_ba_med_4.avi'.
+2024-04-15 18:18:27,856 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/AdamandAlvonplayingbasketball1_shoot_ball_f_nm_np1_ba_med_11.avi'.
+2024-04-15 18:18:28,066 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/LearnToShootFromTheMaster_shoot_ball_f_nm_np1_ba_med_2.avi'.
+2024-04-15 18:18:28,236 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/ReggieMillerTakesonThreeAverageGuysinaShootout_shoot_ball_u_nm_np1_ba_med_16.avi'.
+2024-04-15 18:18:28,540 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/3PointJumpShotPractice-09_21_07_shoot_ball_f_nm_np1_ri_med_7.avi'.
+2024-04-15 18:18:28,843 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/Finding_Forrester_3_shoot_ball_f_nm_np2_ba_med_6.avi'.
+2024-04-15 18:18:29,152 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/ReggieMillerTakesonThreeAverageGuysinaShootout_shoot_ball_u_nm_np1_ba_med_3.avi'.
+2024-04-15 18:18:29,401 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/Finding_Forrester_3_shoot_ball_u_nm_np2_fr_med_2.avi'.
+2024-04-15 18:18:29,795 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/PlayingBasketball_shoot_ball_f_nm_np1_ri_med_5.avi'.
+2024-04-15 18:18:29,984 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/LearnToShootFromTheMaster_shoot_ball_f_nm_np1_ba_med_5.avi'.
+2024-04-15 18:18:30,269 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/ReggieMillerTakesonThreeAverageGuysinaShootout_shoot_ball_u_nm_np1_ba_med_6.avi'.
+2024-04-15 18:18:30,506 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/JashaunKidsWhoRipAmazingBasketball_shoot_ball_u_cm_np1_le_med_3.avi'.
+2024-04-15 18:18:30,787 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/ReggieMillerTakesonThreeAverageGuysinaShootout_shoot_ball_u_nm_np1_ba_med_11.avi'.
+2024-04-15 18:18:31,032 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/Clay_sBasketballSkillz_shoot_ball_f_nm_np1_ba_med_2.avi'.
+2024-04-15 18:18:31,286 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/KELVIN_shoot_ball_u_cm_np1_ba_med_0.avi'.
+2024-04-15 18:18:31,561 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/HMDB/shoot_ball/BrandonWebmanplayingbasketball_shoot_ball_f_nm_np1_ba_med_7.avi'.

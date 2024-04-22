@@ -1,0 +1,7 @@
+2024-04-02 18:12:27,124 [INFO] Running analysis on HMDB dataset.
+2024-04-02 18:12:27,125 [INFO] The HMDB dataset contains 51 classes.
+2024-04-02 18:13:57,277 [INFO] Data classes in the HMDB dataset contain on average 132.67 videos.
+2024-04-02 18:13:57,277 [INFO] Videos in the HMDB dataset contain on average 94.49 frame.
+2024-04-02 18:13:57,278 [INFO] Frames in the HMDB dataset on average have the width of 366.81 .
+2024-04-02 18:13:57,278 [INFO] Frames in the HMDB dataset on average have the height of 240.0 .
+2024-04-02 18:13:57,278 [INFO] Videos in the HMDB dataset contain on average have 30.0 FPS.

@@ -1,0 +1,17 @@
+2024-03-27 12:07:40,951 [INFO] Starting folder setup process.
+2024-03-27 12:07:40,951 [INFO] Folder setup process finished successfully.
+2024-03-27 12:07:40,951 [INFO] All necessary datasets are downloaded.
+2024-03-27 12:07:40,951 [INFO] Starting Exploratory Data Analysis (EDA)
+2024-03-27 12:07:40,951 [INFO] Running analysis on DVORAK_CUSTOM dataset.
+2024-03-27 12:07:40,952 [INFO] The DVORAK_CUSTOM dataset contains 4 classes.
+2024-03-27 12:07:41,783 [INFO] Data classes in the DVORAK_CUSTOM dataset contain on average 16.25 videos.
+2024-03-27 12:07:41,783 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average 279.95 frame.
+2024-03-27 12:07:41,783 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the width of 720.0 .
+2024-03-27 12:07:41,783 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the height of 1280.0 .
+2024-03-27 12:07:41,783 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average have 29.86 FPS.
+2024-03-27 12:07:43,859 [INFO] Finished Exploratory Data Analysis (EDA)
+2024-03-27 12:07:43,859 [INFO] Started processing the DVORAK_CUSTOM dataset.
+2024-03-27 12:07:43,859 [INFO] Loading processed data from pickle files.
+2024-03-27 12:07:44,080 [INFO] Finished processing the DVORAK_CUSTOM dataset.
+2024-03-27 12:07:44,271 [INFO] Building Human Activity Recognition Model - ConvLSTM variant.
+2024-03-27 12:07:44,406 [INFO] Finished building Human Activity Recognition Model - ConvLSTM variant.

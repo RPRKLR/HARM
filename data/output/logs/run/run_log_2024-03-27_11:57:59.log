@@ -1,0 +1,91 @@
+2024-03-27 11:57:59,921 [INFO] Starting folder setup process.
+2024-03-27 11:57:59,922 [INFO] Folder setup process finished successfully.
+2024-03-27 11:57:59,922 [INFO] All necessary datasets are downloaded.
+2024-03-27 11:57:59,922 [INFO] Starting Exploratory Data Analysis (EDA)
+2024-03-27 11:57:59,922 [INFO] Running analysis on DVORAK_CUSTOM dataset.
+2024-03-27 11:57:59,922 [INFO] The DVORAK_CUSTOM dataset contains 4 classes.
+2024-03-27 11:58:00,774 [INFO] Data classes in the DVORAK_CUSTOM dataset contain on average 16.25 videos.
+2024-03-27 11:58:00,774 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average 279.95 frame.
+2024-03-27 11:58:00,774 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the width of 720.0 .
+2024-03-27 11:58:00,774 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the height of 1280.0 .
+2024-03-27 11:58:00,774 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average have 29.86 FPS.
+2024-03-27 11:58:02,806 [INFO] Finished Exploratory Data Analysis (EDA)
+2024-03-27 11:58:02,807 [INFO] Started processing the DVORAK_CUSTOM dataset.
+2024-03-27 11:58:02,807 [INFO] Processing the 'high_jumps' data class.
+2024-03-27 11:58:02,807 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/high_jumps/20231209_120058.mp4'.
+2024-03-27 11:58:04,083 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/high_jumps/20231209_122721.mp4'.
+2024-03-27 11:58:05,342 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/high_jumps/20231209_120113.mp4'.
+2024-03-27 11:58:06,665 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/high_jumps/20231209_122130.mp4'.
+2024-03-27 11:58:08,193 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/high_jumps/20231209_120900.mp4'.
+2024-03-27 11:58:09,707 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/high_jumps/20231209_122107.mp4'.
+2024-03-27 11:58:10,973 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/high_jumps/20231209_121521.mp4'.
+2024-03-27 11:58:12,560 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/high_jumps/20231209_120940.mp4'.
+2024-03-27 11:58:14,220 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/high_jumps/20231209_120926.mp4'.
+2024-03-27 11:58:15,875 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/high_jumps/20231209_122118.mp4'.
+2024-03-27 11:58:17,279 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/high_jumps/20231209_122739.mp4'.
+2024-03-27 11:58:18,827 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/high_jumps/20231209_120919.mp4'.
+2024-03-27 11:58:20,245 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/high_jumps/20231209_121509.mp4'.
+2024-03-27 11:58:22,056 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/high_jumps/20231209_120129.mp4'.
+2024-03-27 11:58:23,513 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/high_jumps/20231209_121532.mp4'.
+2024-03-27 11:58:24,654 [INFO] Processing the 'squat' data class.
+2024-03-27 11:58:24,655 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/squat/20231209_122641.mp4'.
+2024-03-27 11:58:25,917 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/squat/20231209_120842.mp4'.
+2024-03-27 11:58:27,696 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/squat/20231209_120808.mp4'.
+2024-03-27 11:58:29,526 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/squat/20231209_115635.mp4'.
+2024-03-27 11:58:31,297 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/squat/20231209_115715.mp4'.
+2024-03-27 11:58:33,107 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/squat/20231209_120828.mp4'.
+2024-03-27 11:58:35,089 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/squat/20231209_122702.mp4'.
+2024-03-27 11:58:36,260 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/squat/20231209_121330.mp4'.
+2024-03-27 11:58:38,075 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/squat/20231209_121315.mp4'.
+2024-03-27 11:58:39,849 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/squat/20231209_122021.mp4'.
+2024-03-27 11:58:40,978 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/squat/20231209_121343.mp4'.
+2024-03-27 11:58:42,180 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/squat/20231209_121956.mp4'.
+2024-03-27 11:58:43,974 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/squat/20231209_115653.mp4'.
+2024-03-27 11:58:45,292 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/squat/20231209_122622.mp4'.
+2024-03-27 11:58:46,705 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/squat/20231209_122008.mp4'.
+2024-03-27 11:58:48,214 [INFO] Processing the 'lunges' data class.
+2024-03-27 11:58:48,214 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/lunges/20231209_121431.mp4'.
+2024-03-27 11:58:50,153 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/lunges/20231209_121849.mp4'.
+2024-03-27 11:58:52,143 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/lunges/20231209_120708.mp4'.
+2024-03-27 11:58:53,976 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/lunges/20231209_122529.mp4'.
+2024-03-27 11:58:55,543 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/lunges/20231209_121838.mp4'.
+2024-03-27 11:58:56,709 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/lunges/20231209_115953.mp4'.
+2024-03-27 11:58:58,590 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/lunges/20231209_115926.mp4'.
+2024-03-27 11:59:00,517 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/lunges/20231209_121444.mp4'.
+2024-03-27 11:59:02,440 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/lunges/20231209_121419.mp4'.
+2024-03-27 11:59:03,612 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/lunges/20231209_122559.mp4'.
+2024-03-27 11:59:05,353 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/lunges/20231209_120750.mp4'.
+2024-03-27 11:59:07,295 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/lunges/20231209_120733.mp4'.
+2024-03-27 11:59:09,169 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/lunges/20231209_122506.mp4'.
+2024-03-27 11:59:10,371 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/lunges/20231209_121901.mp4'.
+2024-03-27 11:59:11,539 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/lunges/20231209_120025.mp4'.
+2024-03-27 11:59:12,779 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/lunges/20231209_115854.mp4'.
+2024-03-27 11:59:14,572 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/lunges/20231209_120017.mp4'.
+2024-03-27 11:59:16,043 [INFO] Processing the 'jumping_jacks' data class.
+2024-03-27 11:59:16,044 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/jumping_jacks/20231209_120536.mp4'.
+2024-03-27 11:59:17,928 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/jumping_jacks/20231209_121244.mp4'.
+2024-03-27 11:59:20,000 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/jumping_jacks/20231209_121230.mp4'.
+2024-03-27 11:59:21,579 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/jumping_jacks/20231209_115530.mp4'.
+2024-03-27 11:59:22,824 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/jumping_jacks/20231209_122413.mp4'.
+2024-03-27 11:59:24,711 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/jumping_jacks/20231209_120642.mp4'.
+2024-03-27 11:59:26,031 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/jumping_jacks/20231209_115350.mp4'.
+2024-03-27 11:59:27,759 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/jumping_jacks/20231209_121640.mp4'.
+2024-03-27 11:59:29,333 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/jumping_jacks/20231209_121626.mp4'.
+2024-03-27 11:59:30,788 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/jumping_jacks/20231209_115508.mp4'.
+2024-03-27 11:59:31,968 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/jumping_jacks/20231209_121257.mp4'.
+2024-03-27 11:59:33,372 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/jumping_jacks/20231209_115410.mp4'.
+2024-03-27 11:59:35,127 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/jumping_jacks/20231209_121652.mp4'.
+2024-03-27 11:59:36,611 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/jumping_jacks/20231209_120621.mp4'.
+2024-03-27 11:59:37,808 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/jumping_jacks/20231209_115328.mp4'.
+2024-03-27 11:59:39,863 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/jumping_jacks/20231209_122448.mp4'.
+2024-03-27 11:59:41,476 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/jumping_jacks/20231209_115544.mp4'.
+2024-03-27 11:59:42,751 [INFO] Currently processing: '/home/peter/dp/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/jumping_jacks/20231209_122428.mp4'.
+2024-03-27 11:59:44,332 [INFO] Saving processed data to /home/peter/dp/Human_Activity_Video_Recognition/data/processed/DVORAK_CUSTOM/features_C_4_W_64_H_64_S_30.pkl .
+2024-03-27 11:59:44,332 [INFO] Creating pickle folder /home/peter/dp/Human_Activity_Video_Recognition/data/processed/DVORAK_CUSTOM for processed data.
+2024-03-27 11:59:44,530 [INFO] Saving processed data to /home/peter/dp/Human_Activity_Video_Recognition/data/processed/DVORAK_CUSTOM/labels_C_4_W_64_H_64_S_30.pkl .
+2024-03-27 11:59:44,530 [INFO] Creating pickle folder /home/peter/dp/Human_Activity_Video_Recognition/data/processed/DVORAK_CUSTOM for processed data.
+2024-03-27 11:59:44,531 [INFO] Saving processed data to /home/peter/dp/Human_Activity_Video_Recognition/data/processed/DVORAK_CUSTOM/video_paths_C_4_W_64_H_64_S_30.pkl .
+2024-03-27 11:59:44,531 [INFO] Creating pickle folder /home/peter/dp/Human_Activity_Video_Recognition/data/processed/DVORAK_CUSTOM for processed data.
+2024-03-27 11:59:44,534 [INFO] Finished processing the DVORAK_CUSTOM dataset.
+2024-03-27 11:59:44,930 [INFO] Building Human Activity Recognition Model - ConvLSTM variant.
+2024-03-27 11:59:45,158 [INFO] Finished building Human Activity Recognition Model - ConvLSTM variant.

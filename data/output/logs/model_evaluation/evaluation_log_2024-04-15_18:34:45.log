@@ -1,0 +1,17 @@
+2024-04-15 18:44:58,491 [INFO] Confusion Matrix:
+[[1 1 0 2]
+ [0 1 0 0]
+ [0 3 1 0]
+ [0 0 0 4]]
+2024-04-15 18:44:58,856 [INFO] Classification Report:
+               precision    recall  f1-score   support
+
+   high_jumps       1.00      0.25      0.40         4
+        squat       0.20      1.00      0.33         1
+       lunges       1.00      0.25      0.40         4
+jumping_jacks       0.67      1.00      0.80         4
+
+     accuracy                           0.54        13
+    macro avg       0.72      0.62      0.48        13
+ weighted avg       0.84      0.54      0.52        13
+

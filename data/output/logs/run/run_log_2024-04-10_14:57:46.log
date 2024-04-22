@@ -1,0 +1,34 @@
+2024-04-10 14:57:46,664 [INFO] Starting folder setup process.
+2024-04-10 14:57:46,664 [INFO] Folder setup process finished successfully.
+2024-04-10 14:57:46,664 [INFO] All necessary datasets are downloaded.
+2024-04-10 14:57:46,664 [INFO] Starting Exploratory Data Analysis (EDA)
+2024-04-10 14:57:46,665 [INFO] Running analysis on DVORAK_CUSTOM dataset.
+2024-04-10 14:57:46,665 [INFO] The DVORAK_CUSTOM dataset contains 4 classes.
+2024-04-10 14:57:51,628 [INFO] Data classes in the DVORAK_CUSTOM dataset contain on average 40.25 videos.
+2024-04-10 14:57:51,629 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average 285.54 frame.
+2024-04-10 14:57:51,629 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the width of 720.0 .
+2024-04-10 14:57:51,629 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the height of 1280.0 .
+2024-04-10 14:57:51,629 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average have 29.76 FPS.
+2024-04-10 14:57:54,670 [INFO] Finished Exploratory Data Analysis (EDA)
+2024-04-10 14:57:54,670 [INFO] Started processing the DVORAK_CUSTOM dataset.
+2024-04-10 14:57:54,671 [INFO] Loading processed data from pickle files.
+2024-04-10 14:57:54,831 [INFO] Finished processing the DVORAK_CUSTOM dataset.
+2024-04-10 14:57:54,925 [INFO] Building Human Activity Recognition Model - ConvLSTM variant.
+2024-04-10 14:57:55,163 [INFO] Finished building Human Activity Recognition Model - ConvLSTM variant.
+2024-04-10 15:01:58,335 [INFO] Confusion Matrix:
+[[0 1 0 3]
+ [0 1 0 0]
+ [0 0 2 2]
+ [0 0 0 4]]
+2024-04-10 15:01:58,629 [INFO] Classification Report:
+               precision    recall  f1-score   support
+
+   high_jumps       0.00      0.00      0.00         4
+        squat       0.50      1.00      0.67         1
+       lunges       1.00      0.50      0.67         4
+jumping_jacks       0.44      1.00      0.62         4
+
+     accuracy                           0.54        13
+    macro avg       0.49      0.62      0.49        13
+ weighted avg       0.48      0.54      0.45        13
+
