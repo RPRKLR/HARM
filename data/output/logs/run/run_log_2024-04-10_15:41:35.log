@@ -31,4 +31,3 @@ jumping_jacks       0.67      1.00      0.80         4
      accuracy                           0.62        13
     macro avg       0.62      0.69      0.57        13
  weighted avg       0.69      0.62      0.59        13
-

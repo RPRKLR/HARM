@@ -103,7 +103,7 @@ def generate_confusion_matrix(
     )
 
     # Create new Figure
-    fig, ax = plt.subplots(figsize=(16, 9))
+    fig, ax = plt.subplots(figsize=(21, 13))
 
     # Plot the Confusion Matrix
     ax = sns.heatmap(confusion_matrix, annot=True, fmt='g')
@@ -111,6 +111,7 @@ def generate_confusion_matrix(
     ax.set_title('Confusion Matrix')
     ax.set_xlabel('Predicted Label')
     ax.set_ylabel('Actual Label')
+    ax.tick_params(axis='x', labelrotation=45)
 
     save_figure(figure=fig, output_path=output_path)
 
@@ -153,6 +154,7 @@ def generate_training_history_plots(
     dataset_name: str,
     timestamp: str,
     model_tag: str,
+    column_pairs: List[List[str]] = [['loss', 'val_loss'], ['acc', 'val_acc']],
 ) -> None:
     """Generates Training History Plots.
 
@@ -165,24 +167,14 @@ def generate_training_history_plots(
     """
     history['num_of_epochs'] = history.index
 
-    draw_data_plot(
-        data=history,
-        columns=['loss', 'val_loss'],
-        path=os.path.join(
-            plot_output_folder_path,
-            dataset_name,
-            'line_charts',
-            f'{model_tag}_training_history_loss_{timestamp}',
-        ),
-    )
-
-    draw_data_plot(
-        data=history,
-        columns=['acc', 'val_acc'],
-        path=os.path.join(
-            plot_output_folder_path,
-            dataset_name,
-            'line_charts',
-            f'{model_tag}_training_history_accuracy_{timestamp}',
-        ),
-    )
+    for column_pair in column_pairs:
+        draw_data_plot(
+            data=history,
+            columns=column_pair,
+            path=os.path.join(
+                plot_output_folder_path,
+                dataset_name,
+                'line_charts',
+                f'{model_tag}_training_history_{column_pair[0]}_{timestamp}',
+            ),
+        )

@@ -1,0 +1,41 @@
+2024-05-09 16:05:55,304 [INFO] Model architecture: VideoMAEForVideoClassification(
+  (videomae): VideoMAEModel(
+    (embeddings): VideoMAEEmbeddings(
+      (patch_embeddings): VideoMAEPatchEmbeddings(
+        (projection): Conv3d(3, 768, kernel_size=(2, 16, 16), stride=(2, 16, 16))
+      )
+    )
+    (encoder): VideoMAEEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x VideoMAELayer(
+          (attention): VideoMAEAttention(
+            (attention): VideoMAESelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=False)
+              (key): Linear(in_features=768, out_features=768, bias=False)
+              (value): Linear(in_features=768, out_features=768, bias=False)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+            (output): VideoMAESelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): VideoMAEIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): VideoMAEOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+          (layernorm_after): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        )
+      )
+    )
+    (layernorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+  )
+  (classifier): Linear(in_features=768, out_features=4, bias=True)
+)
+2024-05-09 16:53:39,192 [INFO] Confusion Matrix:
+[[20, 0, 0, 3], [0, 48, 0, 0], [0, 0, 43, 9], [0, 0, 0, 47]]

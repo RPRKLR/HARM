@@ -1,7 +1,8 @@
 import logging
 import os
 from dataclasses import dataclass
-from typing import Any, Dict
+
+from human_activity_recognition.enums import Dataset, Model
 
 
 @dataclass
@@ -70,10 +71,10 @@ class ProjectConfig:
             'data_folder_path': OWN_DATA_FOLDER_PATH,
             'download_url': None,
         },
-        # HMDB_DATA_NAME: {
-        #     'data_folder_path': HMDB_DATA_FOLDER_PATH,
-        #     'download_url': 'https://serre-lab.clps.brown.edu/wp-content/uploads/2013/10/hmdb51_org.rar',
-        # },
+        HMDB_DATA_NAME: {
+            'data_folder_path': HMDB_DATA_FOLDER_PATH,
+            'download_url': 'https://serre-lab.clps.brown.edu/wp-content/uploads/2013/10/hmdb51_org.rar',
+        },
         # UCF50_DATA_NAME: {
         #     'data_folder_path': UCF50_DATA_FOLDER_PATH,
         #     'download_url': 'https://crcv.ucf.edu/data/UCF50.rar',
@@ -84,15 +85,24 @@ class ProjectConfig:
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'
     }
 
-    DATA = (OWN_DATA_FOLDER_PATH, OWN_DATA_NAME)
+    DATA_OPTIONS = {
+        Dataset.DVORAK_CUSTOM: (OWN_DATA_FOLDER_PATH, OWN_DATA_NAME),
+        Dataset.HMDB: (HMDB_DATA_FOLDER_PATH, HMDB_DATA_NAME),
+        Dataset.UCF50: (UCF50_DATA_FOLDER_PATH, UCF50_DATA_NAME),
+    }
+
+    DATA = DATA_OPTIONS[Dataset.DVORAK_CUSTOM]
 
     # endregion
 
     # region Data Processing
 
-    SUBSET_SIZE = 20
-    IMAGE_HEIGHT = 300
-    IMAGE_WIDTH = 300
+    # 4 - DVORAK_CUSTOM; 20 - HMDB, UCF50;
+    SUBSET_SIZE = 4
+    # 64 - ConvLSTM; 128 - ResNet; 224 - Hugging Face models, GoogLeNet;
+    IMAGE_HEIGHT = 224
+    # 64 - ConvLSTM; 128 - ResNet; 224 - Hugging Face models, GoogLeNet;
+    IMAGE_WIDTH = 224
     SEQUENCE_LENGTH = 20
     TEST_SPLIT_PERCENTAGE = 0.2
     VALIDATION_SPLIT_PERCENTAGE = 0.2
@@ -102,22 +112,31 @@ class ProjectConfig:
 
     # region Modeling
 
+    SUPPORTED_HUGGING_FACE_MODELS = {
+        Model.TIMESFORMER: 'facebook/timesformer-base-finetuned-k400',
+        Model.VIDEOMAE: 'MCG-NJU/videomae-base',
+    }
+
     # Model settings
+    MODEL_IDENTIFIER = None  # Used with Hugging Face Models
     OUTPUT_LAYER_ACTIVATION_FUNCTION = 'softmax'
     LOSS_FUNCTION = 'categorical_crossentropy'
-    ADAM_OPTIMIZER_LEARNING_RATE = 0.005
+    # 5e-5 - Hugging Face models, GoogLeNet; 1e-4 - ConvLSTM, ResNet;
+    ADAM_OPTIMIZER_LEARNING_RATE = 5e-5
     METRICS_TO_SHOW = ['acc']
 
     # Training settings
-    TRAINING_SHUFFLE = False
-    TRAINING_EPOCHS = 200  # 2000
-    BATCH_SIZE = 128
+    TRAINING_SHUFFLE = True
+    # 4 - Hugging Face models; 25 - GoogLeNet; 200 - ConvLSTM, ResNet;
+    TRAINING_EPOCHS = 4
+    # 2 - Hugging Face models, GoogLeNet; 4 - ConvLSTM, ResNet;
+    BATCH_SIZE = 2
 
     # Early stopping settings
     USE_EARLY_STOPPING = True
     EARLY_STOPPING_MONITOR = 'val_loss'
     EARLY_STOPPING_MODE = 'min'
-    EARLY_STOPPING_PATIENCE = 15
+    EARLY_STOPPING_PATIENCE = 20
     EARLY_STOPPING_RESTORE_BEST_WEIGHTS = True
     EARLY_STOPPING_TAG = (
         f'__early_stopping_monitor_{EARLY_STOPPING_MONITOR}'

@@ -1,0 +1,22 @@
+2024-04-22 07:53:35,211 [INFO] Starting folder setup process.
+2024-04-22 07:53:35,211 [INFO] Folder setup process finished successfully.
+2024-04-22 07:53:35,211 [INFO] All necessary datasets are downloaded.
+2024-04-22 07:53:35,211 [INFO] Starting Exploratory Data Analysis (EDA)
+2024-04-22 07:53:35,211 [INFO] Running analysis on DVORAK_CUSTOM dataset.
+2024-04-22 07:53:35,212 [INFO] The DVORAK_CUSTOM dataset contains 4 classes.
+2024-04-22 07:53:41,450 [INFO] Data classes in the DVORAK_CUSTOM dataset contain on average 55.25 videos.
+2024-04-22 07:53:41,450 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average 269.18 frame.
+2024-04-22 07:53:41,450 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the width of 720.0 .
+2024-04-22 07:53:41,450 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the height of 1280.0 .
+2024-04-22 07:53:41,450 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average have 29.72 FPS.
+2024-04-22 07:53:43,814 [INFO] Finished Exploratory Data Analysis (EDA)
+2024-04-22 07:53:43,814 [INFO] Creating folder: /home/peter/HARM/Human_Activity_Video_Recognition/data/processed/extracted/W_300_H_300_S_20
+2024-04-22 07:53:43,815 [INFO] Started processing the DVORAK_CUSTOM dataset.
+2024-04-22 07:53:43,815 [INFO] Processing the 'high_jumps' data class.
+2024-04-22 07:53:43,815 [INFO] Currently processing: '/home/peter/HARM/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/high_jumps/20231209_120058.mp4'.
+2024-04-22 07:53:43,868 [INFO] Creating folder: /home/peter/HARM/Human_Activity_Video_Recognition/data/processed/extracted/W_300_H_300_S_20/DVORAK_CUSTOM/high_jumps
+2024-04-22 07:53:44,675 [INFO] Currently processing: '/home/peter/HARM/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/high_jumps/20231209_122721.mp4'.
+2024-04-22 07:53:45,735 [INFO] Currently processing: '/home/peter/HARM/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/high_jumps/20231209_120113.mp4'.
+2024-04-22 07:53:46,883 [INFO] Currently processing: '/home/peter/HARM/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/high_jumps/20240409_185011.mp4'.
+2024-04-22 07:53:48,598 [INFO] Currently processing: '/home/peter/HARM/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/high_jumps/20240409_183109.mp4'.
+2024-04-22 07:53:50,039 [INFO] Currently processing: '/home/peter/HARM/Human_Activity_Video_Recognition/data/input/DVORAK_CUSTOM/high_jumps/20240409_184631.mp4'.

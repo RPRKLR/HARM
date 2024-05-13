@@ -1,9 +1,12 @@
+# SOURCE: https://bleedaiacademy.com/human-activity-recognition-using-tensorflow-cnn-lstm/
+
 import os
 from logging import Logger
 from typing import List
 
 import numpy as np
 import pandas as pd
+import tensorflow as tf
 from cv2.typing import MatLike
 from keras.callbacks import EarlyStopping
 from keras.layers import (
@@ -29,8 +32,6 @@ from human_activity_recognition.utils import (
 from human_activity_recognition.utils.utils import (
     create_missing_parent_directories,
 )
-
-# TODO - Increase model performance (Possible architecture changes).
 
 
 class HumanActivityRecognitionModelConvLSTM:
@@ -130,7 +131,30 @@ class HumanActivityRecognitionModelConvLSTM:
             logger=self.__run_logger,
         )
 
+        self.__set_gpu(memory_limit=4096)
+
         self.__model = self.__build_model()
+
+    def __set_gpu(self, memory_limit: int) -> None:
+        """Sets up GPU for model training by limiting the available memory to
+        avoid memory overflow.
+
+        Args:
+            memory_limit (int): Size of graphical memory to allocate in MB.
+        """
+        self.__gpus = tf.config.experimental.list_physical_devices('GPU')
+        if self.__gpus:
+            try:
+                tf.config.experimental.set_virtual_device_configuration(
+                    self.__gpus[0],
+                    [
+                        tf.config.experimental.VirtualDeviceConfiguration(
+                            memory_limit=memory_limit
+                        )
+                    ],
+                )
+            except RuntimeError as e:
+                print(e)
 
     def __build_model(self) -> Model:
         """Builds Human Activity Recognition Model - ConvLSTM variant.
@@ -216,21 +240,24 @@ class HumanActivityRecognitionModelConvLSTM:
             metrics=Config.METRICS_TO_SHOW,
         )
 
-        history = self.__model.fit(
-            self.__train_set_features,
-            self.__train_set_label,
-            epochs=Config.TRAINING_EPOCHS,
-            batch_size=Config.BATCH_SIZE,
-            shuffle=Config.TRAINING_SHUFFLE,
-            verbose=2,
-            validation_data=(
-                self.__validation_set_features,
-                self.__validation_set_label,
-            ),
-            callbacks=(
-                [early_stopping_callback] if Config.USE_EARLY_STOPPING else None
-            ),
-        )
+        with tf.device('/gpu:0' if self.__gpus else '/cpu:0'):
+            history = self.__model.fit(
+                self.__train_set_features,
+                self.__train_set_label,
+                epochs=Config.TRAINING_EPOCHS,
+                batch_size=Config.BATCH_SIZE,
+                shuffle=Config.TRAINING_SHUFFLE,
+                verbose=2,
+                validation_data=(
+                    self.__validation_set_features,
+                    self.__validation_set_label,
+                ),
+                callbacks=(
+                    [early_stopping_callback]
+                    if Config.USE_EARLY_STOPPING
+                    else None
+                ),
+            )
 
         generate_training_history_plots(
             history=pd.DataFrame(history.history),

@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 4
+names: ['high_jumps', 'jumping_jacks', 'lunges', 'squats']
+
+roboflow:
+  workspace: activityrecognition-noyo4
+  project: exercise-ekbld
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/activityrecognition-noyo4/exercise-ekbld/dataset/2

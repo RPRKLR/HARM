@@ -20,3 +20,34 @@
 - [ ] Implement CLI
 
 transfer learning
+
+# Usage
+
+## Help
+
+   ```sh
+   python main.py --help
+   ```
+
+## Training
+
+   ```sh
+   python main.py --functionality train --model convlstm --dataset dvorak_custom --epochs 50 --test-percentage 0.2 --resolution 224 --batch-size 32
+   ```
+
+   ```sh
+   python main.py --functionality train --model resnet --dataset dvorak_custom --epochs 50 --test-percentage 0.2 --resolution 224 --batch-size 32
+   ```
+
+   ```sh
+   python main.py --functionality train --model googlenet --dataset dvorak_custom --epochs 50 --test-percentage 0.2 --resolution 224 --batch-size 32
+   ```
+
+   ```sh
+   python main.py --functionality train --model timesformer --dataset dvorak_custom --epochs 50 --test-percentage 0.2 --resolution 224 --batch-size 32
+   ```
+
+## Prediction
+   ```sh
+   python main.py --functionality predict --single-class-prediction --model MODEL_TYPE --model-path "MODEL_PATH.keras" --paths "['VIDEO_PATH.mp4']"
+   ```

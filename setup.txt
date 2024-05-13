@@ -1,0 +1,1 @@
+sed -i 's/import torchvision.transforms.functional_tensor as F_t/import torchvision.transforms.functional as F_t/' venv-prod/lib/*/site-packages/pytorchvideo/transforms/augmentations.py

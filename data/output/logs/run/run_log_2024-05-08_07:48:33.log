@@ -1,0 +1,75 @@
+2024-05-08 07:48:33,003 [INFO] Starting folder setup process.
+2024-05-08 07:48:33,003 [INFO] Folder setup process finished successfully.
+2024-05-08 07:48:33,003 [INFO] All necessary datasets are downloaded.
+2024-05-08 07:48:33,003 [INFO] Starting Exploratory Data Analysis (EDA)
+2024-05-08 07:48:33,003 [INFO] Running analysis on DVORAK_CUSTOM dataset.
+2024-05-08 07:48:33,003 [INFO] The DVORAK_CUSTOM dataset contains 4 classes.
+2024-05-08 07:48:36,580 [INFO] Data classes in the DVORAK_CUSTOM dataset contain on average 55.25 videos.
+2024-05-08 07:48:36,580 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average 269.18 frame.
+2024-05-08 07:48:36,580 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the width of 720.0 .
+2024-05-08 07:48:36,580 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the height of 1280.0 .
+2024-05-08 07:48:36,580 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average have 29.72 FPS.
+2024-05-08 07:48:38,255 [INFO] Finished Exploratory Data Analysis (EDA)
+2024-05-08 07:48:38,255 [INFO] Started processing the DVORAK_CUSTOM dataset.
+2024-05-08 07:48:38,255 [INFO] Processing the 'high_jumps' data class.
+2024-05-08 07:48:38,255 [INFO] Processing the 'jumping_jacks' data class.
+2024-05-08 07:48:38,256 [INFO] Processing the 'lunges' data class.
+2024-05-08 07:48:38,256 [INFO] Processing the 'squat' data class.
+2024-05-08 07:48:39,978 [INFO] Finished processing the DVORAK_CUSTOM dataset.
+2024-05-08 07:48:39,978 [INFO] Building Human Activity Recognition Model - Timesformer-base-finetuned-k400 variant.
+2024-05-08 07:48:41,148 [INFO] Finished building Human Activity Recognition Model - Timesformer-base-finetuned-k400 variant.
+2024-05-08 07:48:41,149 [INFO] Model architecture: TimesformerForVideoClassification(
+  (timesformer): TimesformerModel(
+    (embeddings): TimesformerEmbeddings(
+      (patch_embeddings): TimesformerPatchEmbeddings(
+        (projection): Conv2d(3, 768, kernel_size=(16, 16), stride=(16, 16))
+      )
+      (pos_drop): Dropout(p=0.0, inplace=False)
+      (time_drop): Dropout(p=0.0, inplace=False)
+    )
+    (encoder): TimesformerEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x TimesformerLayer(
+          (drop_path): Identity()
+          (attention): TimeSformerAttention(
+            (attention): TimesformerSelfAttention(
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+            )
+            (output): TimesformerSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): TimesformerIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): TimesformerOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (layernorm_after): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (temporal_layernorm): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (temporal_attention): TimeSformerAttention(
+            (attention): TimesformerSelfAttention(
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+            )
+            (output): TimesformerSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (temporal_dense): Linear(in_features=768, out_features=768, bias=True)
+        )
+      )
+    )
+    (layernorm): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+  )
+  (classifier): Linear(in_features=768, out_features=4, bias=True)
+)
+2024-05-08 08:32:58,041 [INFO] Confusion Matrix:
+[[46, 0, 2, 0], [2, 101, 0, 0], [0, 0, 98, 10], [0, 0, 0, 100]]

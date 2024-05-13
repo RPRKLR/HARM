@@ -1,0 +1,61 @@
+2024-05-09 16:05:47,561 [INFO] Starting folder setup process.
+2024-05-09 16:05:47,562 [INFO] Folder setup process finished successfully.
+2024-05-09 16:05:47,562 [INFO] All necessary datasets are downloaded.
+2024-05-09 16:05:47,562 [INFO] Starting Exploratory Data Analysis (EDA)
+2024-05-09 16:05:47,562 [INFO] Running analysis on DVORAK_CUSTOM dataset.
+2024-05-09 16:05:47,562 [INFO] The DVORAK_CUSTOM dataset contains 4 classes.
+2024-05-09 16:05:51,055 [INFO] Data classes in the DVORAK_CUSTOM dataset contain on average 55.25 videos.
+2024-05-09 16:05:51,056 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average 269.18 frame.
+2024-05-09 16:05:51,056 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the width of 720.0 .
+2024-05-09 16:05:51,056 [INFO] Frames in the DVORAK_CUSTOM dataset on average have the height of 1280.0 .
+2024-05-09 16:05:51,056 [INFO] Videos in the DVORAK_CUSTOM dataset contain on average have 29.72 FPS.
+2024-05-09 16:05:52,528 [INFO] Finished Exploratory Data Analysis (EDA)
+2024-05-09 16:05:52,528 [INFO] Started processing the DVORAK_CUSTOM dataset.
+2024-05-09 16:05:52,528 [INFO] Processing the 'high_jumps' data class.
+2024-05-09 16:05:52,528 [INFO] Processing the 'jumping_jacks' data class.
+2024-05-09 16:05:52,528 [INFO] Processing the 'lunges' data class.
+2024-05-09 16:05:52,529 [INFO] Processing the 'squat' data class.
+2024-05-09 16:05:54,081 [INFO] Finished processing the DVORAK_CUSTOM dataset.
+2024-05-09 16:05:54,082 [INFO] Building Human Activity Recognition Model - Videomae-base variant.
+2024-05-09 16:05:55,303 [INFO] Finished building Human Activity Recognition Model - Videomae-base variant.
+2024-05-09 16:05:55,304 [INFO] Model architecture: VideoMAEForVideoClassification(
+  (videomae): VideoMAEModel(
+    (embeddings): VideoMAEEmbeddings(
+      (patch_embeddings): VideoMAEPatchEmbeddings(
+        (projection): Conv3d(3, 768, kernel_size=(2, 16, 16), stride=(2, 16, 16))
+      )
+    )
+    (encoder): VideoMAEEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x VideoMAELayer(
+          (attention): VideoMAEAttention(
+            (attention): VideoMAESelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=False)
+              (key): Linear(in_features=768, out_features=768, bias=False)
+              (value): Linear(in_features=768, out_features=768, bias=False)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+            (output): VideoMAESelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): VideoMAEIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): VideoMAEOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+          (layernorm_after): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        )
+      )
+    )
+    (layernorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+  )
+  (classifier): Linear(in_features=768, out_features=4, bias=True)
+)
+2024-05-09 16:53:39,171 [INFO] Confusion Matrix:
+[[20, 0, 0, 3], [0, 48, 0, 0], [0, 0, 43, 9], [0, 0, 0, 47]]
